@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <TableRow
+        android:id="@+id/profile_tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+
+            <ImageView
+	            android:id="@+id/profile_imageView_profile"
+	            android:layout_width="85dp"
+	            android:layout_height="85dp"
+	            android:src="@drawable/me_gusta" />   
+    </TableRow>
+    
+ 	<TableRow
+        android:id="@+id/profile_tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+
+ 		<Button
+ 		    android:id="@+id/button1"
+ 		    android:layout_width="wrap_content"
+ 		    android:layout_height="wrap_content"
+ 		    android:text="Button" />
+
+ 		<Button
+ 		    android:id="@+id/button2"
+ 		    android:layout_width="wrap_content"
+ 		    android:layout_height="wrap_content"
+ 		    android:text="Button" />
+
+    </TableRow>
+    
+    <TableRow
+        android:id="@+id/profile_tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>
+
+    </TableRow>
+
+</TableLayout>
