@@ -3,17 +3,32 @@ package com.classrooms.model;
 import java.util.ArrayList;
 
 public class post {
-	String body;
+	String name;
+	String description;
 	String date;
 
-	public String getBody() {
-		return body;
+	public String getName() {
+		return name;
 	}
 
 
-	public void setBody(String body) {
-		this.body = body;
+
+	public void setName(String name) {
+		this.name = name;
 	}
+
+
+
+	public String getDescription() {
+		return description;
+	}
+
+
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
 
 
 	public String getDate() {
@@ -21,32 +36,26 @@ public class post {
 	}
 
 
+
 	public void setDate(String date) {
 		this.date = date;
 	}
 
-
-	public static ArrayList<profile> populateItems() {
-		ArrayList<profile> items = new ArrayList<profile>();
-
-// Loop for populating the list of classrooms and their respective information 		
-//		for (int x = 0; x < 1; x++) { 
-//			
-//			profile item = new profile();
-//			
-//			switch (x) {
-//			case 0: {
-//				item.body = "test adsfadsfadsfadsfadsfasdfadsfxvcbxcv bla bal bal";
-//				item.date = "12/12/12";
-//			}
-//				break;
-//			
-//
-//
-//			}
-			
-//			items.add(item);
-//		}
+	public static ArrayList<post> populateItems() {
+		ArrayList<post> items = new ArrayList<post>();
+		
+		for (int x = 0; x < 1; x++) { 		
+			post item = new post();			
+			switch (x) {
+				case 0: {
+					item.name = "Michal";
+					item.description = "My first post!!";
+					item.date = "12/12/12";
+				}
+				break;
+			}			
+			items.add(item);
+		}
 
 		return items;
 	}

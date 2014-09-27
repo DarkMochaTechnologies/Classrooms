@@ -2,6 +2,8 @@ package com.classrooms.model;
 
 import java.util.ArrayList;
 
+import com.classrooms.R;
+
 public class classroom {
 	String name;
 	String category;
@@ -48,29 +50,24 @@ public class classroom {
 	}
 
 
-	public static ArrayList<profile> populateItems() {
-		ArrayList<profile> items = new ArrayList<profile>();
-
-// Loop for populating the list of classrooms and their respective information 		
-//		for (int x = 0; x < 1; x++) { 
-//			
-//			profile item = new profile();
-//			
-//			switch (x) {
-//			case 0: {
-//				item.name = "test";
-//				item.categoryd = "password";
-//				item.description = "Mace Windu is the blackest MOFO in star wars";
-//				item.profilePicRef = R.drawable.something;
-//			}
-//				break;
-//			
-//
-//
-//			}
+	public static ArrayList<classroom> populateItems() {
+		ArrayList<classroom> items = new ArrayList<classroom>();
+	
+		for (int x = 0; x < 1; x++) { 
 			
-//			items.add(item);
-//		}
+			classroom item = new classroom();
+			
+			switch (x) {
+				case 0: {
+					item.name = "CS 175  Android";
+					item.category = "science";
+					item.description = "Mobile Android Development";
+					item.profilePicRef = R.drawable.classrooms_logo;
+				}
+				break;
+			}			
+			items.add(item);
+		}
 
 		return items;
 	}

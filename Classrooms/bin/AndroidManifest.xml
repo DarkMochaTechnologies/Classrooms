@@ -43,6 +43,20 @@
 
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.homeExploded"
+            android:label="Profile" >
+            <intent-filter>
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.classroomActivity"
+            android:label="" >
+            <intent-filter>
+
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
