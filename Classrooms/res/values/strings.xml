@@ -9,5 +9,7 @@
     <string name="login">Log In</string>
     <string name="register">Register</string>
     <string name="email">Email</string>
+    <string name="post">Make Post</string>
+    <string name="makeclassroom">Make Classroom</string>
 
 </resources>
