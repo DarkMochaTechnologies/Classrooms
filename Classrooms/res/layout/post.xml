@@ -4,18 +4,18 @@
     android:layout_height="match_parent" >
 
     <ImageView
-        android:id="@+id/profilerow_imageView_profilePic"
+        android:id="@+id/post_imageView_profilePic"
         android:layout_width="45dp"
         android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
         android:src="@drawable/me_gusta" />
 
     <TextView
-        android:id="@+id/makePost_textView_classroom"
+        android:id="@+id/post_textView_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="44dp"
-        android:layout_toRightOf="@+id/profilerow_imageView_profilePic"
+        android:layout_toRightOf="@+id/post_imageView_profilePic"
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -23,26 +23,19 @@
         android:id="@+id/post_textView_post"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/makePost_textView_classroom"
-        android:layout_below="@+id/makePost_textView_classroom"
+        android:layout_alignLeft="@+id/post_textView_name"
+        android:layout_below="@+id/post_textView_name"
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <Button
-        android:id="@+id/profile_button_makepost"
+    <TextView
+        android:id="@+id/post_textView_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/post_textView_post"
-        android:text="@string/post" />
-
-    <Button
-        android:id="@+id/profile_button_makeclassroom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/profile_button_makepost"
-        android:layout_alignBottom="@+id/profile_button_makepost"
-        android:layout_alignParentRight="true"
-        android:text="@string/makeclassroom" />
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/post_textView_post"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>

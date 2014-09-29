@@ -71,6 +71,13 @@
 
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.postActivity"
+            android:label="" >
+            <intent-filter>
+
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

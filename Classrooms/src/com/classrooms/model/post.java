@@ -1,11 +1,39 @@
 package com.classrooms.model;
 
 import java.util.ArrayList;
+import com.classrooms.R;
+
 
 public class post {
 	String name;
 	String description;
 	String date;
+	String location;
+	int profilePic;
+
+	public String getLocation() {
+		return location;
+	}
+
+
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+
+
+	public int getProfilePic() {
+		return profilePic;
+	}
+
+
+
+	public void setProfilePic(int profilePic) {
+		this.profilePic = profilePic;
+	}
+
+
 
 	public String getName() {
 		return name;
@@ -51,6 +79,8 @@ public class post {
 					item.name = "Michal";
 					item.description = "My first post!!";
 					item.date = "12/12/12";
+					item.location = "CS 175";
+					item.profilePic = R.drawable.me_gusta;
 				}
 				break;
 			}			

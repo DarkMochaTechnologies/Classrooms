@@ -4,11 +4,13 @@ import java.util.ArrayList;
 
 import com.classrooms.R;
 import com.classrooms.model.post;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -37,10 +39,12 @@ public class profileAdapter extends ArrayAdapter <ArrayList> {
 		
 		TextView name = (TextView) rowView.findViewById(R.id.profilerow_textView_name);
 		TextView description = (TextView) rowView.findViewById(R.id.profilerow_textView_description);
+		ImageView profilePic = (ImageView) rowView.findViewById(R.id.profilerow_imageView_profilePic); 
 		post item = (post) values.get(position);
 		
 		name.setText(item.getName());
 		description.setText(item.getDescription());
+		profilePic.setImageResource(item.getProfilePic());
 		return rowView;
 	}
 	
