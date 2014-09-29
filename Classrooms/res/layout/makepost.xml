@@ -3,13 +3,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <TextView
-        android:id="@+id/makePost_textView_classroom"
+    <Spinner
+        android:id="@+id/makePost_spinner_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/makePost_editText_name"
+        android:layout_alignRight="@+id/makePost_editText_name"
+        android:layout_below="@+id/makePost_editText_name" />
+
+    <EditText
+        android:id="@+id/makePost_editText_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/makePost_spinner_location"
+        android:layout_below="@+id/makePost_spinner_location"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:lines="8" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/makePost_editText_post"
+        android:layout_alignRight="@+id/makePost_editText_post"
+        android:layout_below="@+id/makePost_editText_post"
+        android:text="@string/post" />
+
+    <EditText
+        android:id="@+id/makePost_editText_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp"
-        android:text="makepost" />
+        android:layout_marginTop="45dp"
+        android:ems="10"
+        android:hint="@string/name" >
+
+        <requestFocus />
+    </EditText>
 
 </RelativeLayout>

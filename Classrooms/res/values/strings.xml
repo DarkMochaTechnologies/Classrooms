@@ -9,7 +9,29 @@
     <string name="login">Log In</string>
     <string name="register">Register</string>
     <string name="email">Email</string>
-    <string name="post">Make Post</string>
+    <string name="post">Write Post</string>
     <string name="makeclassroom">Make Classroom</string>
-
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+    <string name="writehere">Write Here</string>
+	<string-array name="catagories_array">
+        <item>Science</item>
+        <item>Arts</item>
+        <item>Math</item>
+        <item>Literature</item>
+        <item>Computing</item>
+        <item>Engineering</item>
+        <item>Nursing</item>
+        <item>Business</item>
+    </string-array>
+    <string-array name="locations_array">
+        <item>CS 175</item>
+        <item>Algebra</item>
+        <item>Calculus</item>
+        <item>Drawing</item>
+        <item>CS 126</item>
+        <item>Engineering 101</item>
+        <item>Nursing 101</item>
+        <item>Business 101</item>
+    </string-array>    
 </resources>

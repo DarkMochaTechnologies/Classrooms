@@ -3,13 +3,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <TextView
-        android:id="@+id/makePost_textView_classroom"
+    <EditText android:id="@+id/makeClassroom_editText_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:layout_marginTop="45dp" android:ems="10" android:hint="@string/name" /><Spinner
+        android:id="@+id/makeClassroom_spinner_category"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
-        android:text="make classroom" />
+        android:layout_alignLeft="@+id/makeClassroom_editText_name"
+        android:layout_alignRight="@+id/makeClassroom_editText_name"
+        android:layout_below="@+id/makeClassroom_editText_name" />
+
+    <EditText
+        android:id="@+id/makeClassroom_editText_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/makeClassroom_spinner_category"
+        android:layout_below="@+id/makeClassroom_spinner_category"
+        android:ems="10"
+        android:hint="@string/description"
+        android:inputType="textMultiLine"
+        android:lines="8" />
+
+    <Button
+        android:id="@+id/makeClassroom_button_createClassroom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/makeClassroom_editText_description"
+        android:layout_alignRight="@+id/makeClassroom_editText_description"
+        android:layout_below="@+id/makeClassroom_editText_description"
+        android:text="@string/makeclassroom" />
+
+    
 
 </RelativeLayout>

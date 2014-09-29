@@ -6,15 +6,15 @@
     
     <fragment android:name="com.classrooms.fragments.profileMainFragment"
               android:id="@+id/profile_main_fragment"
-              android:layout_weight="1"
+              android:layout_weight="0.25"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content" />
+              android:layout_height="0px" />
 
     <fragment android:name="com.classrooms.fragments.profileListFragment"
               android:id="@+id/profile_list_fragment"
-              android:layout_weight="3"
+              android:layout_weight="0.75"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content" />
+              android:layout_height="0px" />
     
 
 </LinearLayout>

@@ -20,14 +20,14 @@ public class profileMainFragment extends Fragment{
 		// TODO Auto-generated method stub
 		View view = inflater.inflate(R.layout.profilemainfragment, container, false);
 		
-		/*Button makePost = (Button) getView().findViewById(R.id.profile_button_makepost);
-		Button makeClassroom = (Button) getView().findViewById(R.id.profile_button_makeclassroom);
+		Button makePost = (Button) view.findViewById(R.id.profile_button_makepost);
+		Button makeClassroom = (Button) view.findViewById(R.id.profile_button_makeclassroom);
 		
 		makePost.setOnClickListener(new View.OnClickListener() {
 			 
             public void onClick(View v) {
   
-                Intent i = new Intent(getActivity(),register.class);
+                Intent i = new Intent(getActivity(),com.classrooms.activity.makePost.class);
                 startActivity(i);
             }
         
@@ -37,17 +37,16 @@ public class profileMainFragment extends Fragment{
         	 
             public void onClick(View v) {
                
-            	Intent i = new Intent(getActivity(),register.class);
+            	Intent i = new Intent(getActivity(),com.classrooms.activity.makeClassroom.class);
                 startActivity(i);
             }
             
         
         });
-		*/
+		
 		
 		return view;
-		
-		
+			
 	}
 
 }

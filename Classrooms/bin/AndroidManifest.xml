@@ -59,14 +59,14 @@
         </activity>
         <activity
             android:name=".activity.makePost"
-            android:label="" >
+            android:label="Write Post" >
             <intent-filter>
 
             </intent-filter>
         </activity>
         <activity
             android:name=".activity.makeClassroom"
-            android:label="" >
+            android:label="Classroom Creation" >
             <intent-filter>
 
             </intent-filter>
