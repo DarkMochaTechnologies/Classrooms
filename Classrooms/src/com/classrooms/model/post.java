@@ -72,7 +72,7 @@ public class post {
 	public static ArrayList<post> populateItems() {
 		ArrayList<post> items = new ArrayList<post>();
 		
-		for (int x = 0; x < 1; x++) { 		
+		for (int x = 0; x < 10; x++) { 		
 			post item = new post();			
 			switch (x) {
 				case 0: {

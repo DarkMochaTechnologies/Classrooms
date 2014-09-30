@@ -53,7 +53,7 @@ public class classroom {
 	public static ArrayList<classroom> populateItems() {
 		ArrayList<classroom> items = new ArrayList<classroom>();
 	
-		for (int x = 0; x < 1; x++) { 
+		for (int x = 0; x < 10; x++) { 
 			
 			classroom item = new classroom();
 			
