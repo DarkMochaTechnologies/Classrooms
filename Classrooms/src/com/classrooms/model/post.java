@@ -76,9 +76,81 @@ public class post {
 			post item = new post();			
 			switch (x) {
 				case 0: {
-					item.name = "Michal";
-					item.description = "My first post!!";
+					item.name = "Michael Vincent Ymbong";
+					item.description = "My 1 post!!";
 					item.date = "12/12/12";
+					item.location = "CS 175";
+					item.profilePic = R.drawable.me_gusta;
+				}
+				break;
+				case 1: {
+					item.name = "Louiz Vincent Echiverri";
+					item.description = "My 2 post!!";
+					item.date = "11/05/12";
+					item.location = "CS 175";
+					item.profilePic = R.drawable.me_gusta;
+				}
+				break;
+				case 2: {
+					item.name = "Michael Vincent Ymbong";
+					item.description = "My 3 post!!";
+					item.date = "12/12/12";
+					item.location = "CS 175";
+					item.profilePic = R.drawable.me_gusta;
+				}
+				break;
+				case 3: {
+					item.name = "Louiz Vincent Echiverri";
+					item.description = "My 4 post!!";
+					item.date = "11/05/12";
+					item.location = "CS 175";
+					item.profilePic = R.drawable.me_gusta;
+				}
+				break;
+				case 4: {
+					item.name = "Louiz Vincent Echiverri";
+					item.description = "My 5th post!!";
+					item.date = "11/05/12";
+					item.location = "CS 175";
+					item.profilePic = R.drawable.me_gusta;
+				}
+				break;
+				case 5: {
+					item.name = "Michael Vincent Ymbong";
+					item.description = "My 6 post!!";
+					item.date = "12/12/12";
+					item.location = "CS 175";
+					item.profilePic = R.drawable.me_gusta;
+				}
+				break;
+				case 6: {
+					item.name = "Louiz Vincent Echiverri";
+					item.description = "My 7 post!!";
+					item.date = "11/05/12";
+					item.location = "CS 175";
+					item.profilePic = R.drawable.me_gusta;
+				}
+				break;
+				case 7: {
+					item.name = "Michael Vincent Ymbong";
+					item.description = "My 8th post!!";
+					item.date = "12/12/12";
+					item.location = "CS 175";
+					item.profilePic = R.drawable.me_gusta;
+				}
+				break;
+				case 8: {
+					item.name = "Louiz Vincent Echiverri";
+					item.description = "My 9th post!!";
+					item.date = "11/05/12";
+					item.location = "CS 175";
+					item.profilePic = R.drawable.me_gusta;
+				}
+				break;
+				case 9: {
+					item.name = "Louiz Vincent Echiverri";
+					item.description = "My 10th post!!";
+					item.date = "11/05/12";
 					item.location = "CS 175";
 					item.profilePic = R.drawable.me_gusta;
 				}

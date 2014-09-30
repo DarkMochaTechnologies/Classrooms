@@ -21,7 +21,7 @@
         <item>Literature</item>
         <item>Computing</item>
         <item>Engineering</item>
-        <item>Nursing</item>
+        <item>Health</item>
         <item>Business</item>
     </string-array>
     <string-array name="locations_array">
@@ -33,5 +33,7 @@
         <item>Engineering 101</item>
         <item>Nursing 101</item>
         <item>Business 101</item>
+        <item>Math 15</item>
+        <item>Humn 1</item>
     </string-array>    
 </resources>
