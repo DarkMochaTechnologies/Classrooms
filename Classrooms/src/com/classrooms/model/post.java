@@ -79,7 +79,7 @@ public class post {
 					item.name = "Michael Vincent Ymbong";
 					item.description = "My 1 post!!";
 					item.date = "12/12/12";
-					item.location = "CS 175";
+					item.location = "CS 123";
 					item.profilePic = R.drawable.me_gusta;
 				}
 				break;
@@ -87,7 +87,7 @@ public class post {
 					item.name = "Louiz Vincent Echiverri";
 					item.description = "My 2 post!!";
 					item.date = "11/05/12";
-					item.location = "CS 175";
+					item.location = "Business 101";
 					item.profilePic = R.drawable.me_gusta;
 				}
 				break;
@@ -111,7 +111,7 @@ public class post {
 					item.name = "Louiz Vincent Echiverri";
 					item.description = "My 5th post!!";
 					item.date = "11/05/12";
-					item.location = "CS 175";
+					item.location = "Drawing";
 					item.profilePic = R.drawable.me_gusta;
 				}
 				break;
@@ -119,7 +119,7 @@ public class post {
 					item.name = "Michael Vincent Ymbong";
 					item.description = "My 6 post!!";
 					item.date = "12/12/12";
-					item.location = "CS 175";
+					item.location = "Calculus";
 					item.profilePic = R.drawable.me_gusta;
 				}
 				break;
@@ -127,7 +127,7 @@ public class post {
 					item.name = "Louiz Vincent Echiverri";
 					item.description = "My 7 post!!";
 					item.date = "11/05/12";
-					item.location = "CS 175";
+					item.location = "Nursing 101";
 					item.profilePic = R.drawable.me_gusta;
 				}
 				break;

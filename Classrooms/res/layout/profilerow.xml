@@ -9,14 +9,17 @@
         android:layout_height="45dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
         android:src="@drawable/me_gusta" />
 
     <TextView
         android:id="@+id/profilerow_textView_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/profilerow_imageView_profilePic"
+        android:paddingLeft="5dp"
+        android:paddingTop="10dp"
         android:text="TextView"
         android:textStyle="bold" />
 
@@ -24,9 +27,32 @@
         android:id="@+id/profilerow_textView_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/profilerow_imageView_profilePic"
+        android:layout_toRightOf="@+id/profilerow_imageView_profilePic"
         android:layout_alignLeft="@+id/profilerow_textView_name"
-        android:layout_below="@+id/profilerow_textView_name"
+        android:paddingBottom="10dp"
+        android:paddingLeft="5dp"
         android:paddingTop="5dp"
         android:text="TextView" />
+
+    <TextView
+        android:id="@+id/profilerow_textView_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     	android:layout_alignBottom="@+id/profilerow_textView_postedin"
+        android:layout_toRightOf="@+id/profilerow_textView_postedin"
+        android:paddingLeft="3dp"
+        android:text="TextView"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/profilerow_textView_postedin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/profilerow_textView_description"
+        android:layout_alignLeft="@+id/profilerow_textView_name"
+        android:paddingLeft="5dp"
+        android:text="@string/postedin"
+        android:textColor="@android:color/darker_gray" />
 
 </RelativeLayout>

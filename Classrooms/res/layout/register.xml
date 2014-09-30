@@ -31,7 +31,8 @@
         android:layout_below="@+id/register_editText_username"
         android:layout_centerHorizontal="true"
         android:ems="10"
-        android:hint="@string/email" />
+        android:hint="@string/email"
+        android:inputType="textWebEmailAddress" />
 
     <EditText
         android:id="@+id/register_editText_password"
@@ -40,7 +41,8 @@
         android:layout_below="@+id/register_editText_email"
         android:layout_centerHorizontal="true"
         android:ems="10"
-        android:hint="@string/password" />
+        android:hint="@string/password"
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/register_button_register"

@@ -35,5 +35,7 @@
         <item>Business 101</item>
         <item>Math 15</item>
         <item>Humn 1</item>
-    </string-array>    
+    </string-array>
+        <string name="postedin">posted in</string>
+        <string name="school">University of URChoice</string>    
 </resources>

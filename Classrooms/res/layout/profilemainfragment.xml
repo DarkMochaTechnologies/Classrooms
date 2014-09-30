@@ -14,35 +14,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="44dp"
         android:layout_toRightOf="@+id/profilerow_imageView_profilePic"
-        android:text="Large Text"
+        android:paddingLeft="5dp"
+        android:text="@string/name"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/post_textView_post"
+        android:id="@+id/profile_textView_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/makePost_textView_classroom"
         android:layout_below="@+id/makePost_textView_classroom"
-        android:text="Medium Text"
+        android:paddingLeft="5dp"
+        android:text="@string/school"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <Button
-        android:id="@+id/profile_button_makepost"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/post_textView_post"
-        android:text="@string/post" />
-
-    <Button
-        android:id="@+id/profile_button_makeclassroom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/profile_button_makepost"
-        android:layout_alignBottom="@+id/profile_button_makepost"
-        android:layout_alignParentRight="true"
-        android:text="@string/makeclassroom" />
+    
+	    <Button
+	        android:id="@+id/profile_button_makeclassroom"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/profile_button_makepost"
+	        android:layout_alignBottom="@+id/profile_button_makepost"
+	        android:layout_alignParentRight="true"
+	        android:text="@string/makeclassroom" />
+	
+	    <Button
+	        android:id="@+id/profile_button_makepost"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignRight="@+id/makePost_textView_classroom"
+	        android:layout_below="@+id/profile_textView_description"
+	        android:text="@string/post" />
 
 </RelativeLayout>
+

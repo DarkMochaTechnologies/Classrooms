@@ -37,10 +37,8 @@ public class homeAdapter extends ArrayAdapter <ArrayList>{
 		
 		TextView name = (TextView) rowView.findViewById(R.id.homerow_textView_name);
 		TextView description = (TextView) rowView.findViewById(R.id.homerow_textView_description);
-		ImageView imageView = (ImageView) rowView.findViewById(R.id.homerow_imageView);
 		classroom item = (classroom) values.get(position);
 		
-		imageView.setImageResource(item.getProfilePicRef());
 		name.setText(item.getName());
 		description.setText(item.getDescription());
 		return rowView;

@@ -39,11 +39,13 @@ public class profileAdapter extends ArrayAdapter <ArrayList> {
 		
 		TextView name = (TextView) rowView.findViewById(R.id.profilerow_textView_name);
 		TextView description = (TextView) rowView.findViewById(R.id.profilerow_textView_description);
+		TextView location = (TextView) rowView.findViewById(R.id.profilerow_textView_location);
 		ImageView profilePic = (ImageView) rowView.findViewById(R.id.profilerow_imageView_profilePic); 
 		post item = (post) values.get(position);
 		
 		name.setText(item.getName());
 		description.setText(item.getDescription());
+		location.setText(item.getLocation());
 		profilePic.setImageResource(item.getProfilePic());
 		return rowView;
 	}

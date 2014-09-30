@@ -68,14 +68,14 @@ public class classroom {
 				case 1: {
 					item.name = "Algebra";
 					item.category = "Computing";
-					item.description = "basic collage algebra";
+					item.description = "basic college algebra";
 					item.profilePicRef = R.drawable.classrooms_logo;
 				}
 				break;
 				case 2: {
 					item.name = "Calculus";
 					item.category = "Math";
-					item.description = "collage differential calculus";
+					item.description = "college differential calculus";
 					item.profilePicRef = R.drawable.classrooms_logo;
 				}
 				break;

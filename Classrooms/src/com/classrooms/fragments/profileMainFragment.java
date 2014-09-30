@@ -7,6 +7,7 @@ import com.classrooms.activity.register;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,13 @@ public class profileMainFragment extends Fragment{
 		
 		Button makePost = (Button) view.findViewById(R.id.profile_button_makepost);
 		Button makeClassroom = (Button) view.findViewById(R.id.profile_button_makeclassroom);
+		
+		DisplayMetrics displaymetrics = new DisplayMetrics();
+		getActivity().getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+		int width = displaymetrics.widthPixels/2;
+		
+		makePost.setWidth(width);
+		makeClassroom.setWidth(width);
 		
 		makePost.setOnClickListener(new View.OnClickListener() {
 			 
