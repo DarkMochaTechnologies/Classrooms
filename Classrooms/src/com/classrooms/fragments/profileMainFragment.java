@@ -1,9 +1,6 @@
 package com.classrooms.fragments;
 
 import com.classrooms.R;
-import com.classrooms.activity.home;
-import com.classrooms.activity.register;
-
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
