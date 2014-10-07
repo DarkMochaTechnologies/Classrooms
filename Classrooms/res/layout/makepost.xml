@@ -20,7 +20,8 @@
         android:layout_below="@+id/makePost_spinner_location"
         android:ems="10"
         android:inputType="textMultiLine"
-        android:lines="8" />
+        android:lines="8"
+        android:text="@string/writehere" />
 
     <Button
         android:id="@+id/button1"
