@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".activity.login"
-            android:label="" >
+            android:label="Classrooms" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

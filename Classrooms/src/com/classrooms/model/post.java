@@ -80,7 +80,7 @@ public class post {
 					item.description = "My 1 post!!";
 					item.date = "12/12/12";
 					item.location = "CS 123";
-					item.profilePic = R.drawable.me_gusta;
+					item.profilePic = R.drawable.michael;
 				}
 				break;
 				case 1: {
@@ -88,7 +88,7 @@ public class post {
 					item.description = "My 2 post!!";
 					item.date = "11/05/12";
 					item.location = "Business 101";
-					item.profilePic = R.drawable.me_gusta;
+					item.profilePic = R.drawable.louiz;
 				}
 				break;
 				case 2: {
@@ -96,7 +96,7 @@ public class post {
 					item.description = "My 3 post!!";
 					item.date = "12/12/12";
 					item.location = "CS 175";
-					item.profilePic = R.drawable.me_gusta;
+					item.profilePic = R.drawable.michael;
 				}
 				break;
 				case 3: {
@@ -104,7 +104,7 @@ public class post {
 					item.description = "My 4 post!!";
 					item.date = "11/05/12";
 					item.location = "CS 175";
-					item.profilePic = R.drawable.me_gusta;
+					item.profilePic = R.drawable.louiz;
 				}
 				break;
 				case 4: {
@@ -112,7 +112,7 @@ public class post {
 					item.description = "My 5th post!!";
 					item.date = "11/05/12";
 					item.location = "Drawing";
-					item.profilePic = R.drawable.me_gusta;
+					item.profilePic = R.drawable.louiz;
 				}
 				break;
 				case 5: {
@@ -120,7 +120,7 @@ public class post {
 					item.description = "My 6 post!!";
 					item.date = "12/12/12";
 					item.location = "Calculus";
-					item.profilePic = R.drawable.me_gusta;
+					item.profilePic = R.drawable.michael;
 				}
 				break;
 				case 6: {
@@ -128,7 +128,7 @@ public class post {
 					item.description = "My 7 post!!";
 					item.date = "11/05/12";
 					item.location = "Nursing 101";
-					item.profilePic = R.drawable.me_gusta;
+					item.profilePic = R.drawable.louiz;
 				}
 				break;
 				case 7: {
@@ -136,7 +136,7 @@ public class post {
 					item.description = "My 8th post!!";
 					item.date = "12/12/12";
 					item.location = "CS 175";
-					item.profilePic = R.drawable.me_gusta;
+					item.profilePic = R.drawable.michael;
 				}
 				break;
 				case 8: {
@@ -144,7 +144,7 @@ public class post {
 					item.description = "My 9th post!!";
 					item.date = "11/05/12";
 					item.location = "CS 175";
-					item.profilePic = R.drawable.me_gusta;
+					item.profilePic = R.drawable.louiz;
 				}
 				break;
 				case 9: {
@@ -152,7 +152,7 @@ public class post {
 					item.description = "My 10th post!!";
 					item.date = "11/05/12";
 					item.location = "CS 175";
-					item.profilePic = R.drawable.me_gusta;
+					item.profilePic = R.drawable.louiz;
 				}
 				break;
 			}			
