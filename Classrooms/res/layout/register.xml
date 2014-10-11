@@ -22,6 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/homerow_imageView"
+        android:background="@drawable/flat_selector_normal_form"
         android:layout_centerHorizontal="true"
         android:ems="10"
         android:hint="@string/username"
@@ -36,6 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/register_editText_username"
         android:layout_centerHorizontal="true"
+        android:background="@drawable/flat_selector_normal_form"
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textWebEmailAddress"
@@ -47,6 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/register_editText_email"
         android:layout_centerHorizontal="true"
+        android:background="@drawable/flat_selector_normal_form"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
@@ -56,10 +59,10 @@
         android:id="@+id/register_button_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/flat_selector"
         android:layout_alignLeft="@+id/register_editText_password"
         android:layout_alignRight="@+id/register_editText_password"
         android:layout_below="@+id/register_editText_password"
-        android:paddingTop="8dp"
         android:text="@string/register" />
 
 </RelativeLayout>

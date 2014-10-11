@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin" 
-    android:background="#33111111" >
+    android:background="@drawable/container_shadow" >
     
 	<ImageView
 		android:id="@+id/profilerow_imageView_profilePic"
@@ -48,13 +48,16 @@
 	            android:id="@+id/profile_button_makepost"
 	            android:layout_width="0dp"
 	            android:layout_height="wrap_content"
+	            android:background="@drawable/flat_selector_blue"
 	            android:layout_weight="1"
-	            android:text="@string/post" />
+	            android:text="@string/post" 
+	            android:layout_marginRight="3dp"/>
 
 	        <Button
 	            android:id="@+id/profile_button_makeclassroom"
 	            android:layout_width="0dp"
 	            android:layout_height="wrap_content"
+	            android:background="@drawable/flat_selector_blue"
 	            android:layout_weight="1"
 	            android:text="@string/makeclassroom" />
 
