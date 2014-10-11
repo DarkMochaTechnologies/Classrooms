@@ -57,7 +57,6 @@ public final class R {
         public static final int michael=0x7f02001c;
     }
     public static final class id {
-        public static final int action_settings=0x7f090026;
         public static final int button1=0x7f090011;
         public static final int classroom_container=0x7f090000;
         public static final int homerow_imageView=0x7f090005;
@@ -75,6 +74,10 @@ public final class R {
         public static final int makePost_editText_post=0x7f090010;
         public static final int makePost_spinner_location=0x7f09000e;
         public static final int makePost_textView_classroom=0x7f09001a;
+        public static final int menu_home=0x7f090026;
+        public static final int menu_makeClassroom=0x7f090028;
+        public static final int menu_profile=0x7f090027;
+        public static final int menu_writePost=0x7f090029;
         public static final int post_imageView_profilePic=0x7f090012;
         public static final int post_textView_location=0x7f090015;
         public static final int post_textView_name=0x7f090013;
@@ -123,16 +126,19 @@ public final class R {
         public static final int description=0x7f05000b;
         public static final int email=0x7f050007;
         public static final int hello_world=0x7f050001;
+        public static final int home=0x7f05000f;
         public static final int login=0x7f050005;
         public static final int makeclassroom=0x7f050009;
         public static final int name=0x7f05000a;
         public static final int password=0x7f050004;
         public static final int post=0x7f050008;
         public static final int postedin=0x7f05000d;
+        public static final int profile=0x7f050010;
         public static final int register=0x7f050006;
         public static final int school=0x7f05000e;
         public static final int username=0x7f050003;
         public static final int writehere=0x7f05000c;
+        public static final int writepost=0x7f050011;
     }
     public static final class style {
         /** 
