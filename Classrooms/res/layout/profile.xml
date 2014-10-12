@@ -3,37 +3,19 @@
     android:baselineAligned="false"
     android:layout_width="match_parent"
     android:layout_height="match_parent" 
-    android:orientation="horizontal" 
+    android:orientation="vertical" 
     android:background="@drawable/bg" >
+    <fragment android:name="com.classrooms.fragments.profileMainFragment"
+              android:id="@+id/profile_main_fragment"
+              android:layout_weight="0.35"
+              android:layout_width="match_parent"
+              android:layout_height="0px" />
 
-<LinearLayout
-    android:layout_width="100dp"
-    android:layout_height="match_parent"
-    android:layout_weight="0.40"
-    android:baselineAligned="false"
-    android:orientation="vertical" >
-   
-    <fragment
-        android:id="@+id/profile_main_fragment"
-        android:name="com.classrooms.fragments.profileMainFragment"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.40" />
-    
-     <fragment
-         android:id="@+id/profile_list_fragment2"
-         android:name="com.classrooms.fragments.profileListFragment"
-         android:layout_width="match_parent"
-         android:layout_height="0px"
-         android:layout_weight="0.65" />
+    <fragment android:name="com.classrooms.fragments.profileListFragment"
+              android:id="@+id/profile_list_fragment"
+              android:layout_weight="0.65"
+              android:layout_width="match_parent"
+              android:layout_height="0px" />
 
-</LinearLayout>
-
-<fragment
-    android:id="@+id/profile_list_fragment"
-    android:name="com.classrooms.fragments.profileListFragment"
-    android:layout_width="0px"
-    android:layout_height="match_parent"
-    android:layout_weight="0.60" />
 
 </LinearLayout>

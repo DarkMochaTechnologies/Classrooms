@@ -37,7 +37,7 @@
 	    android:layout_height="wrap_content"
 	    android:layout_alignParentLeft="true"
 	    android:layout_alignParentRight="true"
-	    android:layout_marginTop="10dp"
+	    android:layout_marginTop="40dp"
 	    android:layout_below="@+id/profile_textView_description"
 	    android:orientation="horizontal" >
 
@@ -45,7 +45,7 @@
 	            android:id="@+id/profile_button_makepost"
 	            android:layout_width="0dp"
 	            android:layout_height="wrap_content"
-	            android:background="@drawable/flat_selector_blue"
+	            android:background="@drawable/flat_selector_post"
 	            android:layout_weight="1"
 	            android:text="@string/post" 
 	            android:layout_marginRight="3dp"/>
@@ -54,7 +54,7 @@
 	            android:id="@+id/profile_button_makeclassroom"
 	            android:layout_width="0dp"
 	            android:layout_height="wrap_content"
-	            android:background="@drawable/flat_selector_blue"
+	            android:background="@drawable/flat_selector_classroom"
 	            android:layout_weight="1"
 	            android:text="@string/makeclassroom" />
 

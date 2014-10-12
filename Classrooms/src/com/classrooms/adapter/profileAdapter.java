@@ -6,6 +6,7 @@ import com.classrooms.R;
 import com.classrooms.model.post;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,7 +43,11 @@ public class profileAdapter extends ArrayAdapter <ArrayList> {
 		TextView location = (TextView) rowView.findViewById(R.id.profilerow_textView_location);
 		ImageView profilePic = (ImageView) rowView.findViewById(R.id.profilerow_imageView_profilePic); 
 		post item = (post) values.get(position);
-		
+		if (position % 2 == 0) {
+		    rowView.setBackgroundColor(Color.rgb(3, 201, 169));
+		} else {
+		    rowView.setBackgroundColor(Color.rgb(54, 215, 183));  
+		}
 		name.setText(item.getName());
 		description.setText(item.getDescription());
 		location.setText(item.getLocation());
