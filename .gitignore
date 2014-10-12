@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.pydevproject
 .project
 .metadata
@@ -50,3 +51,6 @@ proguard/
 
 # Log Files
 *.log
+=======
+Classrooms/gen/com/classrooms/R.java
+>>>>>>> 376e117d49d5a3b62888002249fa635fe2b5a338
