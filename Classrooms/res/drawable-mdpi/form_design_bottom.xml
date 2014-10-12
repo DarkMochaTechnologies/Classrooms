@@ -5,9 +5,9 @@
      <item android:bottom="@dimen/layer_padding">
       <shape android:shape="rectangle">
 		 <corners android:topLeftRadius=".1dp" android:topRightRadius=".1dp" 
-		     		android:bottomLeftRadius="10dp" android:bottomRightRadius="10dp" />
+		     		android:bottomLeftRadius="5dp" android:bottomRightRadius="5dp" />
           <padding android:left="10dp" android:right="10dp" android:top="10dp" android:bottom="10dp"/>
-          <solid android:color="@color/blue_normal" />
+          <solid android:color="#A2DED0" />
       </shape>
   </item>
 
