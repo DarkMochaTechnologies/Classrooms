@@ -66,13 +66,14 @@ public final class R {
         public static final int ic_action_user_add=0x7f020020;
         public static final int ic_action_video=0x7f020021;
         public static final int ic_launcher=0x7f020022;
-        public static final int louiz=0x7f020023;
-        public static final int me_gusta=0x7f020024;
-        public static final int michael=0x7f020025;
-        public static final int rect_blue=0x7f020026;
-        public static final int rect_blue_pressed=0x7f020027;
-        public static final int rect_normal=0x7f020028;
-        public static final int rect_pressed=0x7f020029;
+        public static final int login_bg=0x7f020023;
+        public static final int louiz=0x7f020024;
+        public static final int me_gusta=0x7f020025;
+        public static final int michael=0x7f020026;
+        public static final int rect_blue=0x7f020027;
+        public static final int rect_blue_pressed=0x7f020028;
+        public static final int rect_normal=0x7f020029;
+        public static final int rect_pressed=0x7f02002a;
     }
     public static final class id {
         public static final int button1=0x7f0a0012;
