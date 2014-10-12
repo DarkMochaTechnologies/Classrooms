@@ -24,6 +24,7 @@
         android:ems="15"
         android:hint="@string/username" 
         android:layout_marginBottom="-6dp"/>
+    
        <EditText
              android:id="@+id/login_line"
              android:layout_width="wrap_content"
@@ -37,9 +38,11 @@
         android:id="@+id/login_editText_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-         android:background="@drawable/flat_selector_forms_bottom"
+        android:background="@drawable/flat_selector_forms_bottom"
         android:layout_alignLeft="@+id/login_editText_username"
+        android:layout_alignRight="@+id/login_editText_username"
         android:layout_below="@+id/login_line"
+        android:layout_centerHorizontal="true"
         android:ems="15"
         android:hint="@string/password"
         android:inputType="textPassword"/>
