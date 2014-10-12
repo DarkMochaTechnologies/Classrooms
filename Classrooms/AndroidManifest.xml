@@ -7,6 +7,14 @@
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="20" />
+    
+    <supports-screens
+			android:smallScreens="true"
+				android:normalScreens="true"
+				android:largeScreens= "true"
+				android:anyDensity="true"
+		/>
+    
 
     <application
         android:allowBackup="true"
