@@ -70,10 +70,12 @@ public final class R {
         public static final int louiz=0x7f020024;
         public static final int me_gusta=0x7f020025;
         public static final int michael=0x7f020026;
-        public static final int rect_blue=0x7f020027;
-        public static final int rect_blue_pressed=0x7f020028;
-        public static final int rect_normal=0x7f020029;
-        public static final int rect_pressed=0x7f02002a;
+        public static final int profile_layer=0x7f020027;
+        public static final int profile_pic_background=0x7f020028;
+        public static final int rect_blue=0x7f020029;
+        public static final int rect_blue_pressed=0x7f02002a;
+        public static final int rect_normal=0x7f02002b;
+        public static final int rect_pressed=0x7f02002c;
     }
     public static final class id {
         public static final int button1=0x7f0a0017;
@@ -99,10 +101,10 @@ public final class R {
         public static final int makePost_editText_post=0x7f0a0016;
         public static final int makePost_spinner_location=0x7f0a0014;
         public static final int makePost_textView_classroom=0x7f0a0020;
-        public static final int menu_home=0x7f0a002e;
-        public static final int menu_makeClassroom=0x7f0a0030;
-        public static final int menu_profile=0x7f0a002f;
-        public static final int menu_writePost=0x7f0a0031;
+        public static final int menu_home=0x7f0a002f;
+        public static final int menu_makeClassroom=0x7f0a0031;
+        public static final int menu_profile=0x7f0a0030;
+        public static final int menu_writePost=0x7f0a0032;
         public static final int post_imageView_profilePic=0x7f0a0018;
         public static final int post_textView_location=0x7f0a001b;
         public static final int post_textView_name=0x7f0a0019;
@@ -110,20 +112,21 @@ public final class R {
         public static final int post_textView_postedin=0x7f0a001a;
         public static final int profile_button_makeclassroom=0x7f0a0023;
         public static final int profile_button_makepost=0x7f0a0022;
-        public static final int profile_list_fragment=0x7f0a001e;
+        public static final int profile_list_fragment=0x7f0a001f;
+        public static final int profile_list_fragment2=0x7f0a001e;
         public static final int profile_main_fragment=0x7f0a001d;
         public static final int profile_textView_description=0x7f0a0021;
-        public static final int profilerow_imageView_profilePic=0x7f0a001f;
-        public static final int profilerow_textView_description=0x7f0a0025;
-        public static final int profilerow_textView_location=0x7f0a0026;
-        public static final int profilerow_textView_name=0x7f0a0024;
-        public static final int profilerow_textView_postedin=0x7f0a0027;
-        public static final int register_button_register=0x7f0a002d;
-        public static final int register_editText_email=0x7f0a002a;
-        public static final int register_editText_password=0x7f0a002c;
-        public static final int register_editText_username=0x7f0a0028;
-        public static final int register_line1=0x7f0a0029;
-        public static final int register_line2=0x7f0a002b;
+        public static final int profilerow_imageView_profilePic=0x7f0a0024;
+        public static final int profilerow_textView_description=0x7f0a0026;
+        public static final int profilerow_textView_location=0x7f0a0027;
+        public static final int profilerow_textView_name=0x7f0a0025;
+        public static final int profilerow_textView_postedin=0x7f0a0028;
+        public static final int register_button_register=0x7f0a002e;
+        public static final int register_editText_email=0x7f0a002b;
+        public static final int register_editText_password=0x7f0a002d;
+        public static final int register_editText_username=0x7f0a0029;
+        public static final int register_line1=0x7f0a002a;
+        public static final int register_line2=0x7f0a002c;
         public static final int tabtextview=0x7f0a0002;
         public static final int textView1=0x7f0a0001;
     }

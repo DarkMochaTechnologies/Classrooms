@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical" 
+    android:background="@drawable/bg" >
+    
+    <fragment android:name="com.classrooms.fragments.profileMainFragment"
+              android:id="@+id/profile_main_fragment"
+              android:layout_weight="0.35"
+              android:layout_width="match_parent"
+              android:layout_height="0px" />
+
+    <fragment android:name="com.classrooms.fragments.profileListFragment"
+              android:id="@+id/profile_list_fragment"
+              android:layout_weight="0.65"
+              android:layout_width="match_parent"
+              android:layout_height="0px" />
+    
+
+</LinearLayout>

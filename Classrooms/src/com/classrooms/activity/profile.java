@@ -2,6 +2,8 @@ package com.classrooms.activity;
 
 import com.classrooms.R;
 
+import android.renderscript.Allocation;
+import android.renderscript.RenderScript;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class profile extends Activity{
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
