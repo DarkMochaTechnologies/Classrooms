@@ -5,7 +5,7 @@
     android:background="#33111111" >
 
     <ImageView
-        android:id="@+id/profilerow_imageView_profilePic"
+        android:id="@+id/classroomrow_imageView_profilePic"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_alignParentLeft="true"
@@ -16,10 +16,10 @@
         android:src="@drawable/me_gusta" />
 
     <TextView
-        android:id="@+id/profilerow_textView_name"
+        android:id="@+id/classroomrow_textView_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/profilerow_imageView_profilePic"
+        android:layout_toRightOf="@+id/classroomrow_imageView_profilePic"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
         android:paddingTop="10dp"
@@ -27,12 +27,12 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/profilerow_textView_description"
+        android:id="@+id/classroomrow_textView_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/profilerow_imageView_profilePic"
-        android:layout_toRightOf="@+id/profilerow_imageView_profilePic"
-        android:layout_alignLeft="@+id/profilerow_textView_name"
+        android:layout_below="@+id/classroomrow_imageView_profilePic"
+        android:layout_toRightOf="@+id/classroomrow_imageView_profilePic"
+        android:layout_alignLeft="@+id/classroomrow_textView_name"
         android:paddingBottom="10dp"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
@@ -40,25 +40,25 @@
         android:text="TextView" />
 
     <TextView
-        android:id="@+id/profilerow_textView_location"
+        android:id="@+id/classroomrow_textView_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-     	android:layout_alignBottom="@+id/profilerow_textView_postedin"
-        android:layout_toRightOf="@+id/profilerow_textView_postedin"
+     	android:layout_alignBottom="@+id/classroomrow_textView_postedon"
+        android:layout_toRightOf="@+id/classroomrow_textView_postedon"
         android:paddingLeft="3dp"
         android:paddingRight="3dp"
         android:text="TextView"
         android:textColor="@android:color/darker_gray" />
 
     <TextView
-        android:id="@+id/profilerow_textView_postedin"
+        android:id="@+id/classroomrow_textView_postedon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/profilerow_textView_description"
-        android:layout_alignLeft="@+id/profilerow_textView_name"
+        android:layout_above="@+id/classroomrow_textView_description"
+        android:layout_alignLeft="@+id/classroomrow_textView_name"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
-        android:text="@string/postedin"
+        android:text="@string/postedon"
         android:textColor="@android:color/darker_gray" />
 
 </RelativeLayout>

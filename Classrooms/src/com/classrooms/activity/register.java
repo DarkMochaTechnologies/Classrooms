@@ -2,6 +2,7 @@ package com.classrooms.activity;
 
 import com.classrooms.R;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +17,9 @@ public class register extends Activity{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.register);
+		
+		ActionBar actionBar = getActionBar();
+		actionBar.hide();
 		
 		Button register = (Button) findViewById(R.id.register_button_register);
 		final EditText username = (EditText)findViewById(R.id.register_editText_username);

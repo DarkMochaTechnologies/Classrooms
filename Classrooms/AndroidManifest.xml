@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".activity.login"
-            android:label="Classrooms" >
+            android:label="Log In" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -43,16 +43,10 @@
 
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activity.homeExploded"
-            android:label="Profile" >
-            <intent-filter>
-
-            </intent-filter>
-        </activity>
+        
         <activity
             android:name=".activity.classroomActivity"
-            android:label="" >
+            android:label="Classroom Page" >
             <intent-filter>
 
             </intent-filter>
@@ -73,7 +67,7 @@
         </activity>
         <activity
             android:name=".activity.postActivity"
-            android:label="" >
+            android:label="Classrooms" >
             <intent-filter>
 
             </intent-filter>
