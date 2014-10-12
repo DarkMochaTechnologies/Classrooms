@@ -44,9 +44,9 @@ public class profileAdapter extends ArrayAdapter <ArrayList> {
 		ImageView profilePic = (ImageView) rowView.findViewById(R.id.profilerow_imageView_profilePic); 
 		post item = (post) values.get(position);
 		if (position % 2 == 0) {
-		    rowView.setBackgroundColor(Color.rgb(3, 201, 169));
+		    rowView.setBackgroundColor(Color.rgb(115,130,118));
 		} else {
-		    rowView.setBackgroundColor(Color.rgb(54, 215, 183));  
+		    rowView.setBackgroundColor(Color.rgb(120,134,107));  
 		}
 		name.setText(item.getName());
 		description.setText(item.getDescription());
