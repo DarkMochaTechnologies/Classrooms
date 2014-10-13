@@ -10,11 +10,12 @@
 
     <ImageView
         android:id="@+id/homerow_imageView"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
+        android:adjustViewBounds="true"
+		android:scaleType="centerCrop"
         android:src="@drawable/classrooms_logo" />
 
     <EditText
@@ -22,14 +23,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/homerow_imageView"
-        android:background="@drawable/flat_selector_normal_form"
+        android:background="@drawable/flat_selector_forms"
+        android:layout_marginBottom="-6dp"
         android:layout_centerHorizontal="true"
-        android:ems="10"
+        android:ems="15"
         android:hint="@string/username"
         android:paddingTop="8dp" >
 
-        <requestFocus />
     </EditText>
+    
+    <EditText
+             android:id="@+id/register_line1"
+             android:layout_width="wrap_content"
+             android:layout_height="1dp"
+             android:ems="15"
+             android:layout_centerHorizontal="true"
+             android:layout_below="@+id/register_editText_username"
+             android:background="#6C7A89"/>
 
     <EditText
         android:id="@+id/register_editText_email"
@@ -37,11 +47,21 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/register_editText_username"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/flat_selector_normal_form"
-        android:ems="10"
+        android:background="@drawable/flat_selector_forms"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="-7dp"
+        android:ems="15"
         android:hint="@string/email"
-        android:inputType="textWebEmailAddress"
-        android:paddingTop="8dp" />
+        android:inputType="textWebEmailAddress" />
+    
+    <EditText
+             android:id="@+id/register_line2"
+             android:layout_width="wrap_content"
+             android:layout_height="1dp"
+             android:ems="15"
+             android:layout_centerHorizontal="true"
+             android:layout_below="@+id/register_editText_email"
+             android:background="#6C7A89"/>
 
     <EditText
         android:id="@+id/register_editText_password"
@@ -49,17 +69,23 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/register_editText_email"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/flat_selector_normal_form"
-        android:ems="10"
+        android:background="@drawable/flat_selector_forms_bottom"
+        android:layout_marginTop="1dp"
+        android:ems="15"
         android:hint="@string/password"
-        android:inputType="textPassword"
-        android:paddingTop="8dp" />
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/register_button_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+		android:shadowColor="#22313F"
+		android:shadowDx="1"
+		android:shadowDy="3"
+		android:shadowRadius="5"
         android:background="@drawable/flat_selector"
+        android:layout_marginTop="5dp"
         android:layout_alignLeft="@+id/register_editText_password"
         android:layout_alignRight="@+id/register_editText_password"
         android:layout_below="@+id/register_editText_password"

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import com.classrooms.R;
 import com.classrooms.activity.postActivity;
-import com.classrooms.adapter.profileAdapter;
+import com.classrooms.adapter.classroomAdapter;
 import com.classrooms.model.post;
 
 import android.app.ListFragment;
@@ -25,7 +25,7 @@ public class classroomPostsFragment extends ListFragment{
 		ArrayList<post> items = post.populateItems();
 		
 		super.onCreate(savedInstanceState);
-		profileAdapter adapter = new profileAdapter(getActivity(),items);
+		classroomAdapter adapter = new classroomAdapter(getActivity(),items);
 		this.setListAdapter(adapter);
 	}
 	

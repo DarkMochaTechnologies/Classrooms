@@ -37,6 +37,7 @@
         <item>Humn 1</item>
     </string-array>
         <string name="postedin">posted in</string>
+        <string name="postedon">posted on</string>
         <string name="school">University of URChoice</string>
         <string name="home">Home</string>
         <string name="profile">Profile</string>
