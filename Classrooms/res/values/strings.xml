@@ -41,5 +41,7 @@
         <string name="school">University of URChoice</string>
         <string name="home">Home</string>
         <string name="profile">Profile</string>
-        <string name="writepost">Write Post</string>    
+        <string name="writepost">Write Post</string>
+        <string name="commenton">commented on</string>
+        <string name="comment">Comment</string>    
 </resources>

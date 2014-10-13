@@ -38,7 +38,7 @@ public class classroomAdapter extends ArrayAdapter <ArrayList> {
 		
 		TextView name = (TextView) rowView.findViewById(R.id.classroomrow_textView_name);
 		TextView description = (TextView) rowView.findViewById(R.id.classroomrow_textView_description);
-		TextView time = (TextView) rowView.findViewById(R.id.classroomrow_textView_postedon);
+		TextView time = (TextView) rowView.findViewById(R.id.classroomrow_textView_date);
 		ImageView profilePic = (ImageView) rowView.findViewById(R.id.classroomrow_imageView_profilePic); 
 		post item = (post) values.get(position);
 		

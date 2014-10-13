@@ -16,25 +16,42 @@ public class postActivity extends Activity{
 	protected void onCreate(Bundle bundle) {
 		// TODO Auto-generated method stub
 		super.onCreate(bundle);
-		setContentView (R.layout.post);
+		setContentView (R.layout.post_classroom);
 		Bundle extras = getIntent().getExtras();
 		if (extras == null){
 			return;
 		}
+		
 		int value1 = extras.getInt("profilepic");
 		String value2 = extras.getString("name");
 		String value3 = extras.getString("location");
 		String value4 = extras.getString("description");
+		TextView name = (TextView) findViewById(R.id.postclassroom_textView_name);
+		TextView location = (TextView) findViewById(R.id.postclassroom_textView_location);
+		TextView post = (TextView) findViewById(R.id.postclassroom_textView_post);
+		ImageView profilePic = (ImageView) findViewById(R.id.postclassroom_imageView_profilePic);
+			
 		if (value2 !=null && value3 != null){
-			TextView name = (TextView) findViewById(R.id.post_textView_name);
-			TextView location = (TextView) findViewById(R.id.post_textView_location);
-			TextView post = (TextView) findViewById(R.id.post_textView_post);
-			ImageView profilePic = (ImageView) findViewById(R.id.post_imageView_profilePic);
 			name.setText(value2);
 			location.setText(value3);
 			post.setText(value4);
 			profilePic.setImageResource(value1);
 		}
+		
+		name.setOnClickListener(new View.OnClickListener() {
+			   @Override
+			   public void onClick(View v) {
+				   Intent i = new Intent(getApplicationContext(),com.classrooms.activity.profile.class);
+	                startActivity(i);
+			   }
+			});
+		location.setOnClickListener(new View.OnClickListener() {
+			   @Override
+			   public void onClick(View v) {
+				   Intent i = new Intent(getApplicationContext(),com.classrooms.activity.classroomActivity.class);
+	                startActivity(i);
+			   }
+			});
 	}
 
 	public void onClick(View view){
