@@ -7,7 +7,7 @@
             </shape>
    </item> -->
  
-  <item android:bottom="@dimen/layer_padding" >
+  <item android:bottom="@dimen/layer_padding" android:left="-15dp" android:right="-15dp" >
       <shape android:shape="rectangle">
           <corners android:radius="@dimen/corner_radius" />
           <solid android:color="@color/blue_normal" />

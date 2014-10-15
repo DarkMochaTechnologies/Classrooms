@@ -21,7 +21,7 @@
     <EditText
         android:id="@+id/makePost_editText_post"
         android:background="@drawable/flat_selector_normal_form"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/makePost_spinner_location"
         android:layout_below="@+id/makePost_spinner_location"
@@ -33,24 +33,42 @@
 
     <Button
         android:id="@+id/button1"
-        android:background="@drawable/flat_selector"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_alignLeft="@+id/makePost_editText_post"
         android:layout_alignRight="@+id/makePost_editText_post"
         android:layout_below="@+id/makePost_editText_post"
-        android:text="@string/post"
-        android:textColor="@color/button_color_1" />
+        android:background="@drawable/flat_selector"
+        android:text="@string/post" 
+        android:textColor="@color/button_color_1"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/makePost_editText_name"
+        android:layout_alignBottom="@+id/makePost_editText_name"
+        android:layout_alignParentLeft="true"
+        android:text="Name: "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/makePost_spinner_location"
+        android:layout_marginTop="23dp"
+        android:text="Course: "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
         android:id="@+id/makePost_editText_name"
-        android:background="@drawable/flat_selector_normal_form"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="145dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:background="@drawable/flat_selector_normal_form"
         android:ems="10"
         android:hint="@string/name" >
 
