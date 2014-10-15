@@ -43,5 +43,6 @@
         <string name="profile">Profile</string>
         <string name="writepost">Write Post</string>
         <string name="commenton">commented on</string>
-        <string name="comment">Comment</string>    
+        <string name="comment">Comment</string>
+        <string name="joinclassroom">Join Classroom</string>    
 </resources>

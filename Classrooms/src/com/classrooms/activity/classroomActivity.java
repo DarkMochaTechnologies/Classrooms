@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class classroomActivity extends Activity{
 	ActionBar.Tab tab1, tab2, tab3;
@@ -35,6 +36,13 @@ public class classroomActivity extends Activity{
         actionBar.addTab(tab1);
         actionBar.addTab(tab2);
         actionBar.addTab(tab3);
+        
+        Bundle extras = getIntent().getExtras();
+		if (extras == null){
+			Toast.makeText(getApplicationContext(), "error in home to activity", Toast.LENGTH_LONG).show();
+		}
+		classroomHomeFragment fragment = new classroomHomeFragment(); //  object of next fragment
+		fragment.setArguments(extras);
     }
     
     @Override
