@@ -37,16 +37,13 @@ public class homeAdapter extends ArrayAdapter <ArrayList>{
 			rowView = inflater.inflate(R.layout.homerow, parent, false);			
 		}
 		
+		ImageView background = (ImageView) rowView.findViewById(R.id.homerow_imageView_background); 
 		TextView name = (TextView) rowView.findViewById(R.id.homerow_textView_name);
 		TextView description = (TextView) rowView.findViewById(R.id.homerow_textView_description);
 		classroom item = (classroom) values.get(position);
 		
-		if (position % 2 == 0) {
-		    rowView.setBackgroundColor(Color.rgb(115,130,118));
-		} else {
-		    rowView.setBackgroundColor(Color.rgb(120,134,107));  
-		}
-		
+
+		background.setImageResource(item.getProfilePicRef());
 		name.setText(item.getName());
 		description.setText(item.getDescription());
 		return rowView;

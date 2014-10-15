@@ -62,70 +62,70 @@ public class classroom {
 					item.name = "CS 175  Android";
 					item.category = "Computing";
 					item.description = "Mobile Android Development";
-					item.profilePicRef = R.drawable.classrooms_logo;
+					item.profilePicRef = R.drawable.background_computing;
 				}
 				break;
 				case 1: {
 					item.name = "Algebra";
-					item.category = "Computing";
+					item.category = "Math";
 					item.description = "basic college algebra";
-					item.profilePicRef = R.drawable.classrooms_logo;
+					item.profilePicRef = R.drawable.background_math;
 				}
 				break;
 				case 2: {
 					item.name = "Calculus";
 					item.category = "Math";
 					item.description = "college differential calculus";
-					item.profilePicRef = R.drawable.classrooms_logo;
+					item.profilePicRef = R.drawable.background_math;
 				}
 				break;
 				case 3: {
 					item.name = "Drawing";
 					item.category = "Arts";
 					item.description = "Basic drawing for dummies";
-					item.profilePicRef = R.drawable.classrooms_logo;
+					item.profilePicRef = R.drawable.background_art;
 				}
 				break;
 				case 4: {
 					item.name = "CS 126";
 					item.category = "Computing";
 					item.description = "Data Structures II";
-					item.profilePicRef = R.drawable.classrooms_logo;
+					item.profilePicRef = R.drawable.background_computing;
 				}
 				break;
 				case 5: {
 					item.name = "Engineering 101";
 					item.category = "Engineering";
 					item.description = "we build stuff";
-					item.profilePicRef = R.drawable.classrooms_logo;
+					item.profilePicRef = R.drawable.background_engineering;
 				}
 				break;
 				case 6: {
 					item.name = "Nursing 101";
 					item.category = "Health";
 					item.description = "for the budding nurse in you ";
-					item.profilePicRef = R.drawable.classrooms_logo;
+					item.profilePicRef = R.drawable.background_health;
 				}
 				break;
 				case 7: {
 					item.name = "Business 101";
 					item.category = "Business";
 					item.description = "entrepreneurs unite";
-					item.profilePicRef = R.drawable.classrooms_logo;
+					item.profilePicRef = R.drawable.background_business;
 				}
 				break;
 				case 8: {
 					item.name = "Math 15";
 					item.category = "Math";
 					item.description = "Trigonometery";
-					item.profilePicRef = R.drawable.classrooms_logo;
+					item.profilePicRef = R.drawable.background_math;
 				}
 				break;
 				case 9: {
 					item.name = "Humn 1";
-					item.category = "Art";
+					item.category = "Arts";
 					item.description = "some art subject you need to take";
-					item.profilePicRef = R.drawable.classrooms_logo;
+					item.profilePicRef = R.drawable.background_art;
 				}
 				break;
 			}			
