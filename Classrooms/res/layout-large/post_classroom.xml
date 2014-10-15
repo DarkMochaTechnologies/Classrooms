@@ -8,7 +8,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
     	android:layout_height="0px" 
-    	android:layout_weight="0.25" >
+    	android:layout_weight="0.15" >
 
 	    <ImageView
 	        android:id="@+id/postclassroom_imageView_profilePic"
@@ -69,28 +69,29 @@
 	        android:text="Medium Text"
 	        android:textAppearance="?android:attr/textAppearanceMedium" />
     </RelativeLayout>
-    
+
     <LinearLayout
         android:layout_width="match_parent"
-    	android:layout_height="0px" 
-    	android:layout_weight="0.15" 
-    	android:orientation="horizontal" >
+        android:layout_height="0px"
+        android:layout_weight="0.25"
+        android:orientation="vertical" >
 
         <EditText
             android:id="@+id/editText1"
-            android:layout_width="0dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="9"
             android:background="@drawable/flat_selector_normal_form"
-            android:hint="@string/writehere" >
-
-        </EditText>
+            android:hint="@string/writehere"
+            android:inputType="textMultiLine"
+            android:lines="4" />
 
         <Button
             android:id="@+id/button1"
             style="?android:attr/buttonStyleSmall"
-            android:layout_width="0dp"
+            android:layout_width="157dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="right"
             android:layout_weight="4"
             android:background="@drawable/flat_selector"
             android:paddingLeft="4dp"
@@ -101,8 +102,8 @@
             android:shadowRadius="5"
             android:text="@string/comment"
             android:textColor="#FFFFFF" />
-        
-	</LinearLayout>
+
+    </LinearLayout>
     
 	<fragment
 	    android:id="@+id/comments_list_fragment"

@@ -4,7 +4,9 @@ import java.util.ArrayList;
 
 import com.classrooms.R;
 import com.classrooms.model.classroom;
+
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +40,12 @@ public class homeAdapter extends ArrayAdapter <ArrayList>{
 		TextView name = (TextView) rowView.findViewById(R.id.homerow_textView_name);
 		TextView description = (TextView) rowView.findViewById(R.id.homerow_textView_description);
 		classroom item = (classroom) values.get(position);
+		
+		if (position % 2 == 0) {
+		    rowView.setBackgroundColor(Color.rgb(115,130,118));
+		} else {
+		    rowView.setBackgroundColor(Color.rgb(120,134,107));  
+		}
 		
 		name.setText(item.getName());
 		description.setText(item.getDescription());

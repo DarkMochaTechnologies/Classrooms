@@ -10,6 +10,7 @@
 
     <Spinner
         android:id="@+id/makePost_spinner_location"
+        android:background="@drawable/flat_selector_normal_form"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/makePost_editText_name"
@@ -19,6 +20,7 @@
 
     <EditText
         android:id="@+id/makePost_editText_post"
+        android:background="@drawable/flat_selector_normal_form"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/makePost_spinner_location"
@@ -31,16 +33,17 @@
 
     <Button
         android:id="@+id/button1"
+        android:background="@drawable/flat_selector"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/makePost_editText_post"
         android:layout_alignRight="@+id/makePost_editText_post"
         android:layout_below="@+id/makePost_editText_post"
-        android:paddingTop="8dp"
         android:text="@string/post" />
 
     <EditText
         android:id="@+id/makePost_editText_name"
+        android:background="@drawable/flat_selector_normal_form"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
