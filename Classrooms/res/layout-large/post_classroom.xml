@@ -12,13 +12,12 @@
 
 	    <ImageView
 	        android:id="@+id/postclassroom_imageView_profilePic"
-	        android:layout_width="45dp"
-	        android:layout_height="45dp"
+	        android:layout_width="80dp"
+	        android:layout_height="80dp"
 	        android:layout_alignParentLeft="true"
 	        android:paddingLeft="10dp"
 	        android:paddingRight="0dp"
-	        android:paddingTop="10dp"
-	        android:src="@drawable/me_gusta" />
+	        android:paddingTop="10dp" />
 
 	    <TextView
 	        android:id="@+id/postclassroom_textView_name"
@@ -56,18 +55,19 @@
 	        android:text="Medium Text"
 	        android:textAppearance="?android:attr/textAppearanceMedium"
 	        android:textColor="@android:color/darker_gray" />
-	
+
 	    <TextView
 	        android:id="@+id/postclassroom_textView_post"
 	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"	
-	        android:layout_alignRight="@+id/postclassroom_textView_postedin"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/postclassroom_textView_postedin"
 	        android:layout_below="@+id/postclassroom_textView_postedin"
 	        android:paddingLeft="5dp"
 	        android:paddingRight="0dp"
 	        android:paddingTop="5dp"
 	        android:text="Medium Text"
 	        android:textAppearance="?android:attr/textAppearanceMedium" />
+
     </RelativeLayout>
 
     <LinearLayout

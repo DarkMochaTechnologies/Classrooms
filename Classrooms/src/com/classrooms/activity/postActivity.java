@@ -22,7 +22,7 @@ public class postActivity extends Activity{
 			return;
 		}
 		
-		int value1 = extras.getInt("profilepic");
+		int value1 = extras.getInt("profilePic");
 		String value2 = extras.getString("name");
 		String value3 = extras.getString("location");
 		String value4 = extras.getString("description");

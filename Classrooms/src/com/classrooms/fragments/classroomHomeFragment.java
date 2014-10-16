@@ -30,8 +30,7 @@ public class classroomHomeFragment extends Fragment{
 			description.setText(bundle.getString("description"));
 			background.setImageResource(bundle.getInt("background"));
 		}
-		else
-			Toast.makeText(getActivity(), "error in fragment", Toast.LENGTH_LONG).show();
+
 		return view;
 	}
 
