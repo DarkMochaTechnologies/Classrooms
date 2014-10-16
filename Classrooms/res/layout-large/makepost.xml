@@ -42,7 +42,7 @@
         android:textColor="@color/button_color_1"/>
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/classroomfilesrow_textView_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/makePost_editText_name"
@@ -67,7 +67,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="145dp"
-        android:layout_toRightOf="@+id/textView1"
+        android:layout_toRightOf="@+id/classroomfilesrow_textView_name"
         android:background="@drawable/flat_selector_normal_form"
         android:ems="10"
         android:hint="@string/name" >

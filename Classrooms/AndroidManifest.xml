@@ -6,13 +6,13 @@
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="20" />
+        android:targetSdkVersion="19" />
     
     <supports-screens
 			android:smallScreens="true"
-				android:normalScreens="true"
-				android:largeScreens= "true"
-				android:anyDensity="true"
+			android:normalScreens="true"
+			android:largeScreens= "true"
+			android:anyDensity="true"
 		/>
     
 

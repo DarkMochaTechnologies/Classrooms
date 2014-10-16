@@ -13,8 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 public class commentsListFragment extends ListFragment{
-	private static final int REQUEST_CODE = 10;
-
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
