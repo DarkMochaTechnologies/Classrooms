@@ -19,4 +19,5 @@
         android:id="@+id/menu_writePost" 
         android:title="@string/writepost" >        
     </item>
+    <item android:id="@+id/menu_uploadfile" android:title="@string/uploadfile"></item>
 </menu>

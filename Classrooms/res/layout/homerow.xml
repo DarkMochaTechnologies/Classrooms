@@ -27,7 +27,8 @@
 	        android:paddingRight="0dp"
 	        android:paddingTop="10dp"
 	        android:text="TextView"
-	        android:textStyle="bold" />
+	        android:textStyle="bold" 
+	        android:textAppearance="?android:attr/textAppearanceLarge"/>
 	
 	    <TextView
 	        android:id="@+id/homerow_textView_description"
@@ -40,7 +41,8 @@
 	        android:paddingLeft="10dp"
 	        android:paddingRight="0dp"
 	        android:paddingTop="5dp"
-	        android:text="TextView" />
+	        android:text="TextView" 
+	        android:textAppearance="?android:attr/textAppearanceLarge"/>
 	
 	</RelativeLayout>
 </FrameLayout>
