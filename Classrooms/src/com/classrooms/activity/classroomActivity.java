@@ -1,5 +1,10 @@
 package com.classrooms.activity;
 
+import android.graphics.Canvas;
+import android.graphics.ColorFilter;
+import android.graphics.drawable.Drawable;
+import android.text.SpannableString;
+import android.view.View;
 import com.classrooms.R;
 import com.classrooms.adapter.classroomTabListener;
 import com.classrooms.fragments.*;
@@ -12,6 +17,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.Color;
+import 	android.view.View;
+import android.view.LayoutInflater;
+import  android.text.style.TypefaceSpan;
 
 public class classroomActivity extends Activity{
 	ActionBar.Tab tab1, tab2, tab3;
@@ -22,7 +32,13 @@ public class classroomActivity extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.classroom);
+        Color color;
+
+
         ActionBar actionBar = getActionBar();
+
+        //actionBar.setBackgroundDrawable(new ColorDrawable(Color.rgb(255,255,255)));
+
 
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
         
@@ -33,7 +49,9 @@ public class classroomActivity extends Activity{
         tab1.setTabListener(new classroomTabListener(classroomHomeFragment));
         tab2.setTabListener(new classroomTabListener(classroomPostsFragment));
         tab3.setTabListener(new classroomTabListener(classroomFilesFragment));
-        
+
+
+
         actionBar.addTab(tab1);
         actionBar.addTab(tab2);
         actionBar.addTab(tab3);
