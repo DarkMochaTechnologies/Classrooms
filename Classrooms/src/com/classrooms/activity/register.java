@@ -1,5 +1,7 @@
 package com.classrooms.activity;
 
+import android.text.Spannable;
+import android.text.SpannableString;
 import com.classrooms.R;
 
 import android.app.ActionBar;
@@ -20,6 +22,7 @@ public class register extends Activity{
 		
 		ActionBar actionBar = getActionBar();
 		actionBar.hide();
+
 		
 		Button register = (Button) findViewById(R.id.register_button_register);
 		final EditText username = (EditText)findViewById(R.id.register_editText_username);

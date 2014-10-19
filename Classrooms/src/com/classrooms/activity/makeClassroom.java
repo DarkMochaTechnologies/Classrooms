@@ -1,5 +1,8 @@
 package com.classrooms.activity;
 
+import android.app.ActionBar;
+import android.text.Spannable;
+import android.text.SpannableString;
 import com.classrooms.R;
 
 import android.app.Activity;
@@ -24,6 +27,16 @@ public class makeClassroom extends Activity implements OnItemSelectedListener {
 		Spinner spinner = (Spinner) findViewById(R.id.makeClassroom_spinner_category);
 		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 		        R.array.catagories_array, android.R.layout.simple_spinner_item);
+
+        ActionBar actionBar =getActionBar();
+
+        SpannableString s = new SpannableString("Classrooms");
+        s.setSpan(new TypefaceSpan(this, "quicksand_book.otf"), 0, s.length(),
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        // Update the action bar title with the TypefaceSpan instance
+
+        actionBar.setTitle(s);
 		
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spinner.setAdapter(adapter);

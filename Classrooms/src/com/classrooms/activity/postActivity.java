@@ -1,5 +1,8 @@
 package com.classrooms.activity;
 
+import android.app.ActionBar;
+import android.text.Spannable;
+import android.text.SpannableString;
 import com.classrooms.R;
 
 import android.app.Activity;
@@ -21,7 +24,19 @@ public class postActivity extends Activity{
 		if (extras == null){
 			return;
 		}
-		
+
+
+        ActionBar actionBar =getActionBar();
+
+        SpannableString s = new SpannableString("Classrooms");
+        s.setSpan(new TypefaceSpan(this, "quicksand_book.otf"), 0, s.length(),
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        // Update the action bar title with the TypefaceSpan instance
+
+        actionBar.setTitle(s);
+
+
 		int value1 = extras.getInt("profilePic");
 		String value2 = extras.getString("name");
 		String value3 = extras.getString("location");

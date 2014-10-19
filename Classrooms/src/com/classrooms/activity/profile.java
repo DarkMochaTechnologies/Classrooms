@@ -1,5 +1,8 @@
 package com.classrooms.activity;
 
+import android.app.ActionBar;
+import android.text.Spannable;
+import android.text.SpannableString;
 import com.classrooms.R;
 
 import android.renderscript.Allocation;
@@ -23,6 +26,17 @@ public class profile extends Activity{
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// TODO Auto-generated method stub
+
+        ActionBar actionBar =getActionBar();
+
+        SpannableString s = new SpannableString("Classrooms");
+        s.setSpan(new TypefaceSpan(this, "quicksand_book.otf"), 0, s.length(),
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        // Update the action bar title with the TypefaceSpan instance
+
+        actionBar.setTitle(s);
+
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
