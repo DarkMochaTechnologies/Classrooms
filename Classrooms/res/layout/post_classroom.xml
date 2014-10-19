@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" 
     android:orientation="vertical"
-    android:background="#738276" >
+    android:background="#FFFFFF" >
     
     <RelativeLayout
         android:layout_width="match_parent"
@@ -79,8 +79,9 @@
         <EditText
             android:id="@+id/editText1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="9"
+            android:layout_height="50dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="10"
             android:background="@drawable/flat_selector_normal_form"
             android:hint="@string/writehere" >
 
@@ -92,8 +93,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="4"
-            android:background="@drawable/flat_selector"
-            android:paddingLeft="4dp"
+            android:background="@drawable/flat_selector_post"
+            android:paddingLeft="5dp"
+            android:layout_marginLeft="5dp"
             android:paddingRight="4dp"
             android:shadowColor="#22313F"
             android:shadowDx="1"
