@@ -40,8 +40,8 @@ public class classroomActivity extends Activity{
 
         //actionBar.setBackgroundDrawable(new ColorDrawable(Color.rgb(255,255,255))); "quicksand_book.otf"
 
-        SpannableString s = new SpannableString("My Title");
-        s.setSpan(new TypefaceSpan("quicksand_book.otf"), 0, s.length(),
+        SpannableString s = new SpannableString("Classrooms");
+        s.setSpan(new TypefaceSpan("fonts/quicksand_book.otf"), 0, s.length(),
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         // Update the action bar title with the TypefaceSpan instance
