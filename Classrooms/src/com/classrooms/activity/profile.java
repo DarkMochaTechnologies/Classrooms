@@ -1,8 +1,10 @@
 package com.classrooms.activity;
 
 import android.app.ActionBar;
+import android.support.v4.widget.DrawerLayout;
 import android.text.Spannable;
 import android.text.SpannableString;
+
 import com.classrooms.R;
 
 import android.renderscript.Allocation;
@@ -12,8 +14,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.AdapterView.OnItemClickListener;
 
 public class profile extends Activity{
+	String[] menu;
+    DrawerLayout dLayout;
+    ListView dList;
+    ArrayAdapter<String> adapter;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +32,41 @@ public class profile extends Activity{
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.profile);
+		
+		/*menu = getResources().getStringArray(R.array.draweritems);
+        dLayout = (DrawerLayout) findViewById(R.id.classroom_drawer_layout);
+        dList = (ListView) findViewById(R.id.classroom_drawer);
+        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,menu);
+        dList.setAdapter(adapter);
+        dList.setSelector(android.R.color.holo_blue_dark);
+        dList.setOnItemClickListener(new OnItemClickListener(){
+	        @Override
+	        public void onItemClick(AdapterView<?> arg0, View v, int position, long id) {
+		        dLayout.closeDrawers();
+		        
+		        switch (position) {
+			    case 0:
+			    	Intent i = new Intent(getApplicationContext(),com.classrooms.activity.home.class);
+	                startActivity(i);
+			    	break;
+			    case 1:
+			    	Intent j = new Intent(getApplicationContext(),com.classrooms.activity.profile.class);
+	                startActivity(j);
+			      	break;
+			    case 2:
+			    	Intent k = new Intent(getApplicationContext(),com.classrooms.activity.makeClassroom.class);
+	                startActivity(k);
+			      	break;
+			    case 3:
+			    	Intent l = new Intent(getApplicationContext(),com.classrooms.activity.makePost.class);
+	                startActivity(l);
+			      	break;
+			    default:
+			    	break;
+		    }
+		        
+	        }
+        });*/
 	}
 
 	@Override
