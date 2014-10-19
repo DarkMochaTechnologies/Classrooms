@@ -2,6 +2,7 @@ package com.classrooms.adapter;
 
 import java.util.ArrayList;
 
+import android.graphics.Typeface;
 import com.classrooms.R;
 import com.classrooms.model.post;
 
@@ -29,6 +30,16 @@ public class classroomAdapter extends ArrayAdapter <ArrayList> {
 		// TODO Auto-generated method stub
 		View rowView;
 
+        Typeface[] typeFace = new Typeface[7];
+
+        typeFace[0] = Typeface.createFromAsset(context.getAssets(), "fonts/quicksand_bold.otf");
+        typeFace[1] = Typeface.createFromAsset(context.getAssets(), "fonts/quicksand_book.otf");
+        typeFace[2] = Typeface.createFromAsset(context.getAssets(), "fonts/quicksand_bold_oblique.otf");
+        typeFace[3] = Typeface.createFromAsset(context.getAssets(), "fonts/quicksand_book_oblique.otf");
+        typeFace[4] = Typeface.createFromAsset(context.getAssets(), "fonts/quicksand_dash.otf");
+        typeFace[5] = Typeface.createFromAsset(context.getAssets(), "fonts/quicksand_light.otf");
+        typeFace[6] = Typeface.createFromAsset(context.getAssets(), "fonts/quicksand_light_oblique.otf");
+
 		LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		
 		if(convertView != null){
@@ -46,14 +57,13 @@ public class classroomAdapter extends ArrayAdapter <ArrayList> {
 		name.setText(item.getName());
 		description.setText(item.getDescription());
 		time.setText(item.getDate());
+        name.setTypeface(typeFace[0]);
+        description.setTypeface(typeFace[1]);
+        time.setTypeface(typeFace[6]);
 		profilePic.setImageResource(item.getProfilePic());
-		
-		if (position % 2 == 0) {
-		    rowView.setBackgroundColor(Color.rgb(115,130,118));
-		} else {
-		    rowView.setBackgroundColor(Color.rgb(120,134,107));  
-		}
-		
+
+		rowView.setBackgroundColor(Color.rgb(255,255,255));
+
 		return rowView;
 	}
 }

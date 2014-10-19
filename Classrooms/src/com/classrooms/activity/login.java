@@ -1,5 +1,6 @@
 package com.classrooms.activity;
 
+import android.graphics.Typeface;
 import com.classrooms.R;
 
 import android.app.ActionBar;
@@ -15,6 +16,17 @@ public class login extends Activity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
+        Typeface[] typeFace = new Typeface[7];
+
+        typeFace[0] = Typeface.createFromAsset(getAssets(), "fonts/quicksand_bold.otf");
+        typeFace[1] = Typeface.createFromAsset(getAssets(), "fonts/quicksand_book.otf");
+        typeFace[2] = Typeface.createFromAsset(getAssets(), "fonts/quicksand_bold_oblique.otf");
+        typeFace[3] = Typeface.createFromAsset(getAssets(), "fonts/quicksand_book_oblique.otf");
+        typeFace[4] = Typeface.createFromAsset(getAssets(), "fonts/quicksand_dash.otf");
+        typeFace[5] = Typeface.createFromAsset(getAssets(), "fonts/quicksand_light.otf");
+        typeFace[6] = Typeface.createFromAsset(getAssets(), "fonts/quicksand_light_oblique.otf");
+
+
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.login);
 		
@@ -25,6 +37,11 @@ public class login extends Activity{
 		Button login = (Button) findViewById(R.id.login_button_login);
 		final EditText username = (EditText)findViewById(R.id.login_editText_username);
 		final EditText password = (EditText)findViewById(R.id.login_editText_password);
+
+        login.setTypeface(typeFace[1]);
+        register.setTypeface(typeFace[1]);
+        username.setTypeface(typeFace[6]);
+        password.setTypeface(typeFace[6]);
         
 
         register.setOnClickListener(new View.OnClickListener() {

@@ -23,6 +23,7 @@ public class classroomActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.classroom);
         ActionBar actionBar = getActionBar();
+
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
         
         tab1 = actionBar.newTab().setText("Home");

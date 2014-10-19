@@ -2,6 +2,7 @@ package com.classrooms.activity;
 
 import java.util.ArrayList;
 
+import android.graphics.Typeface;
 import com.classrooms.R;
 import com.classrooms.adapter.homeAdapter;
 import com.classrooms.model.classroom;
@@ -20,7 +21,7 @@ public class home extends ListActivity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		ArrayList<classroom> items = classroom.populateItems();
-		
+
 		super.onCreate(savedInstanceState);
 		homeAdapter adapter = new homeAdapter(this,items);
 		this.setListAdapter(adapter);
@@ -36,6 +37,7 @@ public class home extends ListActivity{
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		classroom item = (classroom) getListAdapter().getItem(position);
+
 		Intent i = new Intent(this, classroomActivity.class);
 		i.putExtra("background", item.getProfilePicRef());
 		i.putExtra("name", item.getName());

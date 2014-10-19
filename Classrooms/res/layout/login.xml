@@ -28,7 +28,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
         android:ems="15"
-        android:hint="@string/username" 
+        android:textColorHint="#C0C0C0"
+        android:hint="@string/username"
+        android:layout_marginBottom="10dp"
         />
 
 
@@ -36,45 +38,45 @@
         android:id="@+id/login_editText_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/flat_selector_forms_bottom"
+        android:background="@drawable/flat_selector_forms"
         android:layout_alignLeft="@+id/login_editText_username"
         android:layout_alignRight="@+id/login_editText_username"
         android:layout_below="@+id/login_editText_username"
         android:layout_centerHorizontal="true"
         android:ems="15"
         android:hint="@string/password"
-        android:inputType="textPassword"/>
+        android:textColorHint="#C0C0C0"
+        android:inputType="textPassword"
+        android:layout_marginBottom="20dp"/>
 
     <Button
         android:id="@+id/login_button_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-		android:textColor="#FFFFFF"
 		android:shadowColor="#22313F"
 		android:shadowDx="1"
 		android:shadowDy="3"
 		android:shadowRadius="5"
         android:background="@drawable/flat_selector"
-        android:layout_alignLeft="@+id/login_editText_password"
-        android:layout_alignRight="@+id/login_editText_username"
-        android:layout_below="@+id/login_editText_password"
         android:text="@string/login"
-        android:layout_marginTop="5dp" />
+        android:layout_alignLeft="@+id/login_editText_username"
+        android:layout_alignRight="@+id/login_editText_password"
+        android:layout_below="@+id/login_editText_password"
+        android:layout_marginBottom="10dp"/>
 
     <Button
         android:id="@+id/login_button_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-		android:textColor="#FFFFFF"
 		android:shadowColor="#22313F"
 		android:shadowDx="1"
 		android:shadowDy="3"
-		android:shadowRadius="5"
+        android:shadowRadius="5"
         android:background="@drawable/flat_selector"
-        android:layout_alignLeft="@+id/login_button_login"
-        android:layout_alignRight="@+id/login_button_login"
+        android:text="@string/register"
         android:layout_below="@+id/login_button_login"
-        android:text="@string/register" 
-        android:layout_marginTop="4dp"/>
+        android:layout_alignLeft="@+id/login_editText_username"
+        android:layout_alignRight="@+id/login_editText_password"
+        />
 
 </RelativeLayout>
