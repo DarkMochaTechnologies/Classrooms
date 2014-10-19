@@ -22,7 +22,6 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.Color;
 import 	android.view.View;
 import android.view.LayoutInflater;
-import  android.text.style.TypefaceSpan;
 
 public class classroomActivity extends Activity{
 	ActionBar.Tab tab1, tab2, tab3;
@@ -41,11 +40,13 @@ public class classroomActivity extends Activity{
         //actionBar.setBackgroundDrawable(new ColorDrawable(Color.rgb(255,255,255))); "quicksand_book.otf"
 
         SpannableString s = new SpannableString("Classrooms");
-        s.setSpan(new TypefaceSpan("fonts/quicksand_book.otf"), 0, s.length(),
+        s.setSpan(new TypefaceSpan(this, "quicksand_book.otf"), 0, s.length(),
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         // Update the action bar title with the TypefaceSpan instance
+
         actionBar.setTitle(s);
+
 
 
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
@@ -57,7 +58,6 @@ public class classroomActivity extends Activity{
         tab1.setTabListener(new classroomTabListener(classroomHomeFragment));
         tab2.setTabListener(new classroomTabListener(classroomPostsFragment));
         tab3.setTabListener(new classroomTabListener(classroomFilesFragment));
-
 
 
         actionBar.addTab(tab1);

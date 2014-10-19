@@ -2,7 +2,12 @@ package com.classrooms.activity;
 
 import java.util.ArrayList;
 
+import android.app.ActionBar;
+import android.graphics.Color;
 import android.graphics.Typeface;
+import android.graphics.drawable.ColorDrawable;
+import android.text.Spannable;
+import android.text.SpannableString;
 import com.classrooms.R;
 import com.classrooms.adapter.homeAdapter;
 import com.classrooms.model.classroom;
@@ -23,6 +28,16 @@ public class home extends ListActivity{
 		ArrayList<classroom> items = classroom.populateItems();
 
 		super.onCreate(savedInstanceState);
+
+        ActionBar actionBar = getActionBar();
+
+        SpannableString s = new SpannableString("Classrooms");
+        s.setSpan(new TypefaceSpan(this, "quicksand_book.otf"), 0, s.length(),
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        // Update the action bar title with the TypefaceSpan instance
+        actionBar.setTitle(s);
+
 		homeAdapter adapter = new homeAdapter(this,items);
 		this.setListAdapter(adapter);
 	}
