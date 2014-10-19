@@ -1,10 +1,8 @@
 package com.classrooms.activity;
 
 import android.app.ActionBar;
-import android.graphics.Typeface;
 import android.text.Spannable;
 import android.text.SpannableString;
-import android.widget.*;
 import com.classrooms.R;
 
 import android.app.Activity;
@@ -13,7 +11,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 public class makePost extends Activity implements OnItemSelectedListener {
 
@@ -37,28 +38,6 @@ public class makePost extends Activity implements OnItemSelectedListener {
 		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 		        R.array.locations_array, android.R.layout.simple_spinner_item);
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        Typeface[] typeFace = new Typeface[2];
-
-         typeFace[0] = Typeface.createFromAsset(getAssets(), "fonts/quicksand_light_oblique.otf");
-        typeFace[1] = Typeface.createFromAsset(getAssets(), "fonts/quicksand_book.otf");
-
-        Button create = (Button) findViewById(R.id.makePost_button_create);
-        final EditText name = (EditText)findViewById(R.id.makePost_editText_name);
-        final EditText post = (EditText)findViewById(R.id.makePost_editText_post);
-
-        final TextView nameLabel = (TextView) findViewById(R.id.makePost_textView_name);
-        final TextView courseLabel = (TextView) findViewById(R.id.makePost_textView_course);
-
-        if(nameLabel != null && courseLabel != null ){
-            nameLabel.setTypeface(typeFace[1]);
-            courseLabel.setTypeface(typeFace[1]);
-        }
-
-
-        create.setTypeface(typeFace[1]);
-        name.setTypeface(typeFace[0]);
-        post.setTypeface(typeFace[0]);
 		spinner.setAdapter(adapter);
 		spinner.setOnItemSelectedListener(this);
 	}

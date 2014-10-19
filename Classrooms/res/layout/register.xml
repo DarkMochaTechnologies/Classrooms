@@ -29,7 +29,7 @@
         android:layout_centerHorizontal="true"
         android:ems="15"
         android:hint="@string/username"
-        android:textColorHint="#2F4F4F"
+        android:textColorHint="#C0C0C0"
         android:paddingTop="8dp" >
 
     </EditText>
@@ -49,7 +49,7 @@
         android:layout_marginBottom="6dp"
         android:ems="15"
         android:hint="@string/email"
-        android:textColorHint="#2F4F4F"
+        android:textColorHint="#C0C0C0"
         android:textColor="#FFFFFF"
         android:inputType="textWebEmailAddress" />
 
@@ -68,7 +68,7 @@
         android:layout_marginBottom="6dp"
         android:ems="15"
         android:hint="@string/password"
-        android:textColorHint="#2F4F4F"
+        android:textColorHint="#C0C0C0"
         android:inputType="textPassword" />
 
     <Button
