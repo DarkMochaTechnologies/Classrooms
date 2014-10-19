@@ -3,6 +3,7 @@ package com.classrooms.activity;
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
 import android.graphics.drawable.Drawable;
+import android.text.Spannable;
 import android.text.SpannableString;
 import android.view.View;
 import com.classrooms.R;
@@ -37,7 +38,14 @@ public class classroomActivity extends Activity{
 
         ActionBar actionBar = getActionBar();
 
-        //actionBar.setBackgroundDrawable(new ColorDrawable(Color.rgb(255,255,255)));
+        //actionBar.setBackgroundDrawable(new ColorDrawable(Color.rgb(255,255,255))); "quicksand_book.otf"
+
+        SpannableString s = new SpannableString("My Title");
+        s.setSpan(new TypefaceSpan("quicksand_book.otf"), 0, s.length(),
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        // Update the action bar title with the TypefaceSpan instance
+        actionBar.setTitle(s);
 
 
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
