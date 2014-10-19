@@ -72,7 +72,7 @@
 		android:shadowDx="1"
 		android:shadowDy="3"
         android:shadowRadius="5"
-        android:background="@drawable/flat_selector"
+        android:background="@drawable/flat_selector_classroom"
         android:text="@string/register"
         android:layout_below="@+id/login_button_login"
         android:layout_alignLeft="@+id/login_editText_username"
