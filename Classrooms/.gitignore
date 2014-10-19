@@ -2,6 +2,7 @@
 .project
 .metadata
 bin/**
+gen/**
 tmp/**
 tmp/**/*
 *.tmp
@@ -12,6 +13,7 @@ local.properties
 .classpath
 .settings/
 .loadpath
+
 
 # External tool builders
 .externalToolBuilders/
@@ -50,3 +52,6 @@ proguard/
 
 # Log Files
 *.log
+
+
+*.iml
