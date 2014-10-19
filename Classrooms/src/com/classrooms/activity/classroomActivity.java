@@ -2,10 +2,12 @@ package com.classrooms.activity;
 
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.view.View;
+import android.widget.TextView;
 import com.classrooms.R;
 import com.classrooms.adapter.classroomTabListener;
 import com.classrooms.fragments.*;
@@ -59,6 +61,24 @@ public class classroomActivity extends Activity{
         tab2.setTabListener(new classroomTabListener(classroomPostsFragment));
         tab3.setTabListener(new classroomTabListener(classroomFilesFragment));
 
+        TextView view = new TextView(this);
+        view.setText("Home");
+        view.setPadding(4,20,4,0);
+        view.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/quicksand_light.otf"));
+
+        TextView view2 = new TextView(this);
+        view2.setText("Posts");
+        view2.setPadding(4,20,4,0);
+        view2.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/quicksand_light.otf"));
+
+        TextView view3 = new TextView(this);
+        view3.setText("Files");
+        view3.setPadding(4,20,4,0);
+        view3.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/quicksand_light.otf"));
+
+        tab1.setCustomView(view);
+        tab2.setCustomView(view2);
+        tab3.setCustomView(view3);
 
         actionBar.addTab(tab1);
         actionBar.addTab(tab2);
