@@ -50,7 +50,6 @@ public class classroomActivity extends Activity{
         actionBar.setTitle(s);
 
 
-
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
         
         tab1 = actionBar.newTab().setText("Home");

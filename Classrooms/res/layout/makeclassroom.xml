@@ -9,7 +9,7 @@
     android:background="@drawable/bg" >
 
     <EditText android:id="@+id/makeClassroom_editText_name" 
-        android:background="@drawable/flat_selector_normal_form"
+        android:background="@drawable/flat_selector_make_form"
         android:layout_width="wrap_content" 
         android:layout_height="wrap_content" 
         android:layout_alignParentTop="true" 
@@ -20,7 +20,7 @@
     
     <Spinner
         android:id="@+id/makeClassroom_spinner_category"
-        android:background="@drawable/flat_selector_normal_form"
+        android:background="@drawable/flat_selector_make_form"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/makeClassroom_editText_name"
@@ -30,7 +30,7 @@
 
     <EditText
         android:id="@+id/makeClassroom_editText_description"
-        android:background="@drawable/flat_selector_normal_form"
+        android:background="@drawable/flat_selector_make_form"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/makeClassroom_spinner_category"
@@ -43,7 +43,7 @@
 
     <Button
         android:id="@+id/makeClassroom_button_createClassroom"
-        android:background="@drawable/flat_selector"
+        android:background="@drawable/flat_selector_post"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop ="5dp"

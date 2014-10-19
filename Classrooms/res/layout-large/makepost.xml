@@ -10,7 +10,7 @@
 
     <Spinner
         android:id="@+id/makePost_spinner_location"
-        android:background="@drawable/flat_selector_normal_form"
+        android:background="@drawable/flat_selector_make_form"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/makePost_editText_name"
@@ -20,7 +20,7 @@
 
     <EditText
         android:id="@+id/makePost_editText_post"
-        android:background="@drawable/flat_selector_normal_form"
+        android:background="@drawable/flat_selector_make_form"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/makePost_spinner_location"
@@ -42,7 +42,7 @@
         android:textColor="@color/button_color_1"/>
 
     <TextView
-        android:id="@+id/classroomfilesrow_textView_name"
+        android:id="@+id/makePost_textView_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/makePost_editText_name"
@@ -52,7 +52,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/makePost_textView_course"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -67,8 +67,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="145dp"
-        android:layout_toRightOf="@+id/classroomfilesrow_textView_name"
-        android:background="@drawable/flat_selector_normal_form"
+        android:layout_toRightOf="@+id/makePost_textView_name"
+        android:background="@drawable/flat_selector_make_form"
         android:ems="10"
         android:hint="@string/name" >
 

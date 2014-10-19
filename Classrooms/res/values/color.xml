@@ -2,6 +2,6 @@
 <resources>
     <color name="blue_pressed">#ABB7B7</color>
     <color name="blue_normal">#FFFFFF</color>
-    <color name="button_color_1">#ECECEC</color>
+    <color name="button_color_1">#EEEEEE</color>
     <color name="actionBar">#FFFFFF</color>
 </resources>
