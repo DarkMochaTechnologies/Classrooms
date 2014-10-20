@@ -3,6 +3,7 @@ package com.classrooms.activity;
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
 import android.graphics.Typeface;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.v4.widget.DrawerLayout;
 import android.text.Spannable;
@@ -19,6 +20,7 @@ import android.widget.TextView;
 import android.widget.*;
 
 import com.classrooms.R;
+import com.classrooms.adapter.CustomTypefaceAdapter;
 import com.classrooms.adapter.classroomTabListener;
 import com.classrooms.fragments.*;
 
@@ -31,35 +33,54 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.graphics.Color;
 
+import com.classrooms.ObjectDrawerItem;
+
 public class classroomActivity extends Activity{
 	ActionBar.Tab tab1, tab2, tab3;
 	Fragment classroomHomeFragment = new classroomHomeFragment();
 	Fragment classroomPostsFragment = new classroomPostsFragment();
 	Fragment classroomFilesFragment = new classroomFilesFragment();
 	String[] menu;
+    String mTitle;
+
     DrawerLayout dLayout;
     ListView dList;
-    ArrayAdapter<String> adapter;
+    CustomTypefaceAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.classroom);
-        Color color;
+        ActionBar actionBar = getActionBar();
 
+        SpannableString s = new SpannableString("Classrooms");
+        s.setSpan(new TypefaceSpan(this, "quicksand_book.otf"), 0, s.length(),
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        if(actionBar != null) {
+            actionBar.setTitle(s);
+        }
         //Nav Drawer code starts here
 
         menu = getResources().getStringArray(R.array.draweritems);
+
+        ObjectDrawerItem[] drawerItem = new ObjectDrawerItem[5];
+
+        drawerItem[0] = new ObjectDrawerItem(R.drawable.ic_action_copy, "Home");
+        drawerItem[1] = new ObjectDrawerItem(R.drawable.ic_action_refresh, "Profile");
+        drawerItem[2] = new ObjectDrawerItem(R.drawable.ic_action_share, "Create Class");
+        drawerItem[3] = new ObjectDrawerItem(R.drawable.ic_action_refresh, "Write Post");
+        drawerItem[4] = new ObjectDrawerItem(R.drawable.ic_action_share, "Upload File");
+
         dLayout = (DrawerLayout) findViewById(R.id.classroom_drawer_layout);
         dList = (ListView) findViewById(R.id.classroom_drawer);
-        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,menu);
+        adapter = new CustomTypefaceAdapter(this, R.layout.draweritems, drawerItem);
         dList.setAdapter(adapter);
-        dList.setSelector(android.R.color.holo_blue_dark);
+        dList.setSelector(new ColorDrawable(Color.parseColor("#B490C695")));
         dList.setOnItemClickListener(new OnItemClickListener(){
 	        @Override
 	        public void onItemClick(AdapterView<?> arg0, View v, int position, long id) {
 		        dLayout.closeDrawers();
-		        
+
 		        switch (position) {
 			    case 0:
 			    	Intent i = new Intent(getApplicationContext(),com.classrooms.activity.home.class);
@@ -80,63 +101,63 @@ public class classroomActivity extends Activity{
 			    default:
 			    	break;
 		    }
-		        
+                if(getActionBar() != null) {
+                    SpannableString s = new SpannableString(menu[position]);
+                    s.setSpan(new TypefaceSpan(getApplicationContext(), "quicksand_book.otf"), 0, s.length(),
+                            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    getActionBar().setTitle(s);
+                }
+
 	        }
         });
         //Nav Drawer code ends here
 
-        ActionBar actionBar = getActionBar();
 
-        //actionBar.setBackgroundDrawable(new ColorDrawable(Color.rgb(255,255,255))); "quicksand_book.otf"
-
-        SpannableString s = new SpannableString("Classrooms");
-        s.setSpan(new TypefaceSpan(this, "quicksand_book.otf"), 0, s.length(),
-                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-
-        // Update the action bar title with the TypefaceSpan instance
-
-        actionBar.setTitle(s);
 
 
 
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-        
-        tab1 = actionBar.newTab().setText("Home");
-        tab2 = actionBar.newTab().setText("Posts");
-        tab3 = actionBar.newTab().setText("Files");
-        
-        tab1.setTabListener(new classroomTabListener(classroomHomeFragment));
-        tab2.setTabListener(new classroomTabListener(classroomPostsFragment));
-        tab3.setTabListener(new classroomTabListener(classroomFilesFragment));
+        // Update the action bar title with the TypefaceSpan instance
+        if(actionBar != null) {
+            actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
-        TextView view = new TextView(this);
-        view.setText("Home");
-        view.setPadding(4,20,4,0);
-        view.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/quicksand_light.otf"));
+            tab1 = actionBar.newTab().setText("Home");
+            tab2 = actionBar.newTab().setText("Posts");
+            tab3 = actionBar.newTab().setText("Files");
 
-        TextView view2 = new TextView(this);
-        view2.setText("Posts");
-        view2.setPadding(4,20,4,0);
-        view2.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/quicksand_light.otf"));
+            tab1.setTabListener(new classroomTabListener(classroomHomeFragment));
+            tab2.setTabListener(new classroomTabListener(classroomPostsFragment));
+            tab3.setTabListener(new classroomTabListener(classroomFilesFragment));
 
-        TextView view3 = new TextView(this);
-        view3.setText("Files");
-        view3.setPadding(4,20,4,0);
-        view3.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/quicksand_light.otf"));
+            TextView view = new TextView(this);
+            view.setText("Home");
+            view.setPadding(4, 20, 4, 0);
+            view.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/quicksand_light.otf"));
 
-        tab1.setCustomView(view);
-        tab2.setCustomView(view2);
-        tab3.setCustomView(view3);
+            TextView view2 = new TextView(this);
+            view2.setText("Posts");
+            view2.setPadding(4, 20, 4, 0);
+            view2.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/quicksand_light.otf"));
 
-        actionBar.addTab(tab1);
-        actionBar.addTab(tab2);
-        actionBar.addTab(tab3);
-        
+            TextView view3 = new TextView(this);
+            view3.setText("Files");
+            view3.setPadding(4, 20, 4, 0);
+            view3.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/quicksand_light.otf"));
+
+            tab1.setCustomView(view);
+            tab2.setCustomView(view2);
+            tab3.setCustomView(view3);
+
+            actionBar.addTab(tab1);
+            actionBar.addTab(tab2);
+            actionBar.addTab(tab3);
+        }
         Bundle extras = getIntent().getExtras();
 		if (extras == null){
 			Toast.makeText(getApplicationContext(), "error in home to activity", Toast.LENGTH_LONG).show();
 		}
 		classroomHomeFragment fragment = new classroomHomeFragment(); //  object of next fragment
 		fragment.setArguments(extras);
+
     }
+
 }

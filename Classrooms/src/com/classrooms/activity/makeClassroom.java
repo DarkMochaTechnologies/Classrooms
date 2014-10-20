@@ -2,7 +2,9 @@ package com.classrooms.activity;
 
 import android.app.ActionBar;
 
+import android.graphics.Color;
 import android.graphics.Typeface;
+import android.graphics.drawable.ColorDrawable;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.widget.*;
@@ -10,7 +12,7 @@ import android.widget.*;
 import android.support.v4.widget.DrawerLayout;
 
 
-
+import com.classrooms.ObjectDrawerItem;
 import com.classrooms.R;
 
 import android.app.Activity;
@@ -25,12 +27,13 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView;
 
 import android.widget.AdapterView.OnItemSelectedListener;
+import com.classrooms.adapter.CustomTypefaceAdapter;
 
 public class makeClassroom extends Activity implements OnItemSelectedListener {
 	String[] menu;
     DrawerLayout dLayout;
     ListView dList;
-    ArrayAdapter<String> adapter;
+    CustomTypefaceAdapter adapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -38,40 +41,53 @@ public class makeClassroom extends Activity implements OnItemSelectedListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.makeclassroom);
 
-		//Nav Drawer code starts here
-		menu = getResources().getStringArray(R.array.draweritems);
+        SpannableString s = new SpannableString("Make Classroom");
+        s.setSpan(new TypefaceSpan(this, "quicksand_book.otf"), 0, s.length(),
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        if(getActionBar()!= null) {
+            getActionBar().setTitle(s);
+        }
+
+        ObjectDrawerItem[] drawerItem = new ObjectDrawerItem[5];
+
+        drawerItem[0] = new ObjectDrawerItem(R.drawable.ic_action_copy, "Home");
+        drawerItem[1] = new ObjectDrawerItem(R.drawable.ic_action_refresh, "Profile");
+        drawerItem[2] = new ObjectDrawerItem(R.drawable.ic_action_share, "Create Class");
+        drawerItem[3] = new ObjectDrawerItem(R.drawable.ic_action_refresh, "Write Post");
+        drawerItem[4] = new ObjectDrawerItem(R.drawable.ic_action_share, "Upload File");
+
         dLayout = (DrawerLayout) findViewById(R.id.makeclassroom_drawer_layout);
         dList = (ListView) findViewById(R.id.makeclassroom_drawer);
-        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,menu);
+        adapter = new CustomTypefaceAdapter(this, R.layout.draweritems, drawerItem);
         dList.setAdapter(adapter);
-        dList.setSelector(android.R.color.holo_blue_dark);
+        dList.setSelector(new ColorDrawable(Color.parseColor("#B490C695")));
         dList.setOnItemClickListener(new OnItemClickListener(){
-	        @Override
-	        public void onItemClick(AdapterView<?> arg0, View v, int position, long id) {
-		        dLayout.closeDrawers();
-		        
-		        switch (position) {
-			    case 0:
-			    	Intent i = new Intent(getApplicationContext(),com.classrooms.activity.home.class);
-	                startActivity(i);
-			    	break;
-			    case 1:
-			    	Intent j = new Intent(getApplicationContext(),com.classrooms.activity.profile.class);
-	                startActivity(j);
-			      	break;
-			    case 2:
-			    	Intent k = new Intent(getApplicationContext(),com.classrooms.activity.makeClassroom.class);
-	                startActivity(k);
-			      	break;
-			    case 3:
-			    	Intent l = new Intent(getApplicationContext(),com.classrooms.activity.makePost.class);
-	                startActivity(l);
-			      	break;
-			    default:
-			    	break;
-		    }
-		        
-	        }
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View v, int position, long id) {
+                dLayout.closeDrawers();
+
+                switch (position) {
+                    case 0:
+                        Intent i = new Intent(getApplicationContext(),com.classrooms.activity.home.class);
+                        startActivity(i);
+                        break;
+                    case 1:
+                        Intent j = new Intent(getApplicationContext(),com.classrooms.activity.profile.class);
+                        startActivity(j);
+                        break;
+                    case 2:
+                        Intent k = new Intent(getApplicationContext(),com.classrooms.activity.makeClassroom.class);
+                        startActivity(k);
+                        break;
+                    case 3:
+                        Intent l = new Intent(getApplicationContext(),com.classrooms.activity.makePost.class);
+                        startActivity(l);
+                        break;
+                    default:
+                        break;
+                }
+
+            }
         });
         //Nav Drawer code ends here
         
@@ -79,17 +95,7 @@ public class makeClassroom extends Activity implements OnItemSelectedListener {
 		Spinner spinner = (Spinner) findViewById(R.id.makeClassroom_spinner_category);
 		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 		        R.array.catagories_array, android.R.layout.simple_spinner_item);
-		
 
-        ActionBar actionBar =getActionBar();
-
-        SpannableString s = new SpannableString("Classrooms");
-        s.setSpan(new TypefaceSpan(this, "quicksand_book.otf"), 0, s.length(),
-                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-
-        // Update the action bar title with the TypefaceSpan instance
-
-        actionBar.setTitle(s);
 
         Typeface[] typeFace = new Typeface[2];
 

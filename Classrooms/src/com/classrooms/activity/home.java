@@ -10,7 +10,10 @@ import android.support.v4.widget.DrawerLayout;
 import android.text.Spannable;
 import android.text.SpannableString;
 
+import android.view.LayoutInflater;
+import com.classrooms.ObjectDrawerItem;
 import com.classrooms.R;
+import com.classrooms.adapter.CustomTypefaceAdapter;
 import com.classrooms.adapter.homeAdapter;
 import com.classrooms.model.classroom;
 
@@ -27,56 +30,76 @@ import android.widget.AdapterView.OnItemClickListener;
 
 public class home extends ListActivity{
 	private static final int REQUEST_CODE = 10;
-	String[] menu;
     DrawerLayout dLayout;
-    ListView dList3;
-    ArrayAdapter<String> adapter2;
+    ListView dList;
+    CustomTypefaceAdapter adapter2;
+    String[] menu;
     
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		ArrayList<classroom> items = classroom.populateItems();
 		super.onCreate(savedInstanceState);
-		
-		menu = getResources().getStringArray(R.array.draweritems);
+
+
+        //Nav Drawer code starts here
+
+       /* menu = getResources().getStringArray(R.array.draweritems);
+
+        ObjectDrawerItem[] drawerItem = new ObjectDrawerItem[5];
+
+        drawerItem[0] = new ObjectDrawerItem(R.drawable.ic_action_copy, "Home");
+        drawerItem[1] = new ObjectDrawerItem(R.drawable.ic_action_refresh, "Profile");
+        drawerItem[2] = new ObjectDrawerItem(R.drawable.ic_action_share, "Create Class");
+        drawerItem[3] = new ObjectDrawerItem(R.drawable.ic_action_refresh, "Write Post");
+        drawerItem[4] = new ObjectDrawerItem(R.drawable.ic_action_share, "Upload File");
+
         dLayout = (DrawerLayout) findViewById(R.id.home_drawer_layout);
-        dList3 = (ListView) findViewById(R.id.home_drawer);
-        if (dList3 != null){
-        adapter2 = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,menu);
-        dList3.setAdapter(adapter2);
-        dList3.setSelector(android.R.color.holo_blue_dark);
-        dList3.setOnItemClickListener(new OnItemClickListener(){
-	        @Override
-	        public void onItemClick(AdapterView<?> arg0, View v, int position, long id) {
-		        dLayout.closeDrawers();
-		        
-		        switch (position) {
-			    case 0:
-			    	Intent i = new Intent(getApplicationContext(),com.classrooms.activity.home.class);
-	                startActivity(i);
-			    	break;
-			    case 1:
-			    	Intent j = new Intent(getApplicationContext(),com.classrooms.activity.profile.class);
-	                startActivity(j);
-			      	break;
-			    case 2:
-			    	Intent k = new Intent(getApplicationContext(),com.classrooms.activity.makeClassroom.class);
-	                startActivity(k);
-			      	break;
-			    case 3:
-			    	Intent l = new Intent(getApplicationContext(),com.classrooms.activity.makePost.class);
-	                startActivity(l);
-			      	break;
-			    default:
-			    	break;
-		        }
-		        
-	        }
-        });
+        dList = (ListView) findViewById(R.id.home_drawer);
+        adapter2 = new CustomTypefaceAdapter(this, R.layout.draweritems, drawerItem);
+        if(adapter2 != null) {
+            dList.setAdapter(adapter2);
+            dList.setSelector(new ColorDrawable(Color.parseColor("#B490C695")));
+            dList.setOnItemClickListener(new OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> arg0, View v, int position, long id) {
+                    dLayout.closeDrawers();
+
+                    switch (position) {
+                        case 0:
+                            Intent i = new Intent(getApplicationContext(), com.classrooms.activity.home.class);
+                            startActivity(i);
+                            break;
+                        case 1:
+                            Intent j = new Intent(getApplicationContext(), com.classrooms.activity.profile.class);
+                            startActivity(j);
+                            break;
+                        case 2:
+                            Intent k = new Intent(getApplicationContext(), com.classrooms.activity.makeClassroom.class);
+                            startActivity(k);
+                            break;
+                        case 3:
+                            Intent l = new Intent(getApplicationContext(), com.classrooms.activity.makePost.class);
+                            startActivity(l);
+                            break;
+                        default:
+                            break;
+                    }
+                    if (getActionBar() != null) {
+                        SpannableString s = new SpannableString(menu[position]);
+                        s.setSpan(new TypefaceSpan(getApplicationContext(), "quicksand_book.otf"), 0, s.length(),
+                                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                        getActionBar().setTitle(s);
+                    }
+
+                }
+            });
+            //Nav Drawer code ends here
         }
+     }*/
 
         ActionBar actionBar = getActionBar();
 
-        SpannableString s = new SpannableString("Classrooms");
+        SpannableString s = new SpannableString("Home");
         s.setSpan(new TypefaceSpan(this, "quicksand_book.otf"), 0, s.length(),
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
@@ -93,7 +116,7 @@ public class home extends ListActivity{
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-	
+
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		classroom item = (classroom) getListAdapter().getItem(position);
