@@ -16,7 +16,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter; 
+import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 public class makePost extends Activity implements OnItemSelectedListener {
