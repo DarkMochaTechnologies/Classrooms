@@ -8,7 +8,16 @@ import android.support.v4.widget.DrawerLayout;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.view.View;
+<<<<<<< HEAD
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+
+=======
 import android.widget.*;
+>>>>>>> origin/revision-1
 import com.classrooms.R;
 import com.classrooms.adapter.classroomTabListener;
 import com.classrooms.fragments.*;
@@ -30,22 +39,67 @@ public class classroomActivity extends Activity{
 	Fragment classroomHomeFragment = new classroomHomeFragment();
 	Fragment classroomPostsFragment = new classroomPostsFragment();
 	Fragment classroomFilesFragment = new classroomFilesFragment();
+<<<<<<< HEAD
+	String[] menu;
+    DrawerLayout dLayout;
+    ListView dList;
+    ArrayAdapter<String> adapter;
+    
+=======
     String[] menu;
     DrawerLayout dLayout;
     ListView dList;
     ArrayAdapter<String> adapter;
 
+>>>>>>> origin/revision-1
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.classroom);
         Color color;
+<<<<<<< HEAD
+        
+        //Nav Drawer code starts here
+=======
+>>>>>>> origin/revision-1
         menu = getResources().getStringArray(R.array.draweritems);
         dLayout = (DrawerLayout) findViewById(R.id.classroom_drawer_layout);
         dList = (ListView) findViewById(R.id.classroom_drawer);
         adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,menu);
         dList.setAdapter(adapter);
         dList.setSelector(android.R.color.holo_blue_dark);
+<<<<<<< HEAD
+        dList.setOnItemClickListener(new OnItemClickListener(){
+	        @Override
+	        public void onItemClick(AdapterView<?> arg0, View v, int position, long id) {
+		        dLayout.closeDrawers();
+		        
+		        switch (position) {
+			    case 0:
+			    	Intent i = new Intent(getApplicationContext(),com.classrooms.activity.home.class);
+	                startActivity(i);
+			    	break;
+			    case 1:
+			    	Intent j = new Intent(getApplicationContext(),com.classrooms.activity.profile.class);
+	                startActivity(j);
+			      	break;
+			    case 2:
+			    	Intent k = new Intent(getApplicationContext(),com.classrooms.activity.makeClassroom.class);
+	                startActivity(k);
+			      	break;
+			    case 3:
+			    	Intent l = new Intent(getApplicationContext(),com.classrooms.activity.makePost.class);
+	                startActivity(l);
+			      	break;
+			    default:
+			    	break;
+		    }
+		        
+	        }
+        });
+        //Nav Drawer code ends here
+        
+=======
         dList.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> arg0, View v, int position, long id) {
@@ -77,6 +131,7 @@ public class classroomActivity extends Activity{
 
 
 
+>>>>>>> origin/revision-1
         ActionBar actionBar = getActionBar();
 
         //actionBar.setBackgroundDrawable(new ColorDrawable(Color.rgb(255,255,255))); "quicksand_book.otf"
@@ -131,38 +186,4 @@ public class classroomActivity extends Activity{
 		classroomHomeFragment fragment = new classroomHomeFragment(); //  object of next fragment
 		fragment.setArguments(extras);
     }
-    
-    @Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// TODO Auto-generated method stub
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
-    
-    @Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// TODO Auto-generated method stub
-		switch (item.getItemId()) {
-		    case R.id.menu_home:
-		    	Intent i = new Intent(this,com.classrooms.activity.home.class);
-                startActivity(i);
-		    	break;
-		    case R.id.menu_profile:
-		    	Intent j = new Intent(this,com.classrooms.activity.profile.class);
-                startActivity(j);
-		      	break;
-		    case R.id.menu_makeClassroom:
-		    	Intent k = new Intent(this,com.classrooms.activity.makeClassroom.class);
-                startActivity(k);
-		      	break;
-		    case R.id.menu_writePost:
-		    	Intent l = new Intent(this,com.classrooms.activity.makePost.class);
-                startActivity(l);
-		      	break;
-		    default:
-		    	break;
-	    }
-
-	    return true;
-	}
 }

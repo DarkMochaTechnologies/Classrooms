@@ -1,13 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/makeclassroom_drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" 
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/bg" >
+    android:layout_height="match_parent"
+   	android:background="#333333">
+   	
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" 
+	    android:paddingBottom="@dimen/activity_vertical_margin"
+	    android:paddingLeft="@dimen/activity_horizontal_margin"
+	    android:paddingRight="@dimen/activity_horizontal_margin"
+	    android:paddingTop="@dimen/activity_vertical_margin"
+	    android:background="@drawable/bg" >
+	
+	    <EditText android:id="@+id/makeClassroom_editText_name" 
+	        android:background="@drawable/flat_selector_make_form"
+	        android:layout_width="wrap_content" 
+	        android:layout_height="wrap_content" 
+	        android:layout_alignParentTop="true" 
+	        android:layout_centerHorizontal="true" 
+	        android:layout_marginTop="45dp" 
+	        android:ems="10" 
+	        android:hint="@string/name" />
+	    
+	    <Spinner
+	        android:id="@+id/makeClassroom_spinner_category"
+	        android:background="@drawable/flat_selector_make_form"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/makeClassroom_editText_name"
+	        android:layout_alignRight="@+id/makeClassroom_editText_name"
+	        android:layout_below="@+id/makeClassroom_editText_name"
+	        android:paddingTop="8dp" />
+	
+	    <EditText
+	        android:id="@+id/makeClassroom_editText_description"
+	        android:background="@drawable/flat_selector_make_form"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/makeClassroom_spinner_category"
+	        android:layout_below="@+id/makeClassroom_spinner_category"
+	        android:ems="10"
+	        android:hint="@string/description"
+	        android:inputType="textMultiLine"
+	        android:lines="8"
+	        android:paddingTop="8dp" />
+	
+	    <Button
+	        android:id="@+id/makeClassroom_button_createClassroom"
+	        android:background="@drawable/flat_selector_post"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop ="5dp"
+	        android:layout_alignLeft="@+id/makeClassroom_editText_description"
+	        android:layout_alignRight="@+id/makeClassroom_editText_description"
+	        android:layout_below="@+id/makeClassroom_editText_description"
+	        android:textColor="@color/button_color_1"
+	        android:text="@string/makeclassroom" />
+	
+	</RelativeLayout>
 
+<<<<<<< HEAD
+	<ListView android:id="@+id/makeclassroom_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:background="#FFFFFF"/>
+	
+</android.support.v4.widget.DrawerLayout>
+=======
     <EditText android:id="@+id/makeClassroom_editText_name" 
         android:background="@drawable/flat_selector_normal_form"
         android:layout_width="wrap_content" 
@@ -54,3 +120,4 @@
         android:text="@string/makeclassroom" />
 
 </RelativeLayout>
+>>>>>>> origin/revision-1

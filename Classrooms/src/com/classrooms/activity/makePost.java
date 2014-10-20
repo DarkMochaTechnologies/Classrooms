@@ -1,11 +1,27 @@
 package com.classrooms.activity;
 
 import android.app.ActionBar;
+<<<<<<< HEAD
 import android.graphics.Typeface;
 import android.support.v4.widget.DrawerLayout;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.widget.*;
+=======
+<<<<<<< HEAD
+import android.graphics.Typeface;
+import android.support.v4.widget.DrawerLayout;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.widget.*;
+
+=======
+import android.support.v4.widget.DrawerLayout;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.widget.ListView;
+>>>>>>> origin/revision-1
+>>>>>>> origin/revision-1
 import com.classrooms.R;
 
 import android.app.Activity;
@@ -14,20 +30,73 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import android.widget.AdapterView.OnItemClickListener;
+=======
+import android.widget.AdapterView;
+>>>>>>> origin/revision-1
+>>>>>>> origin/revision-1
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class makePost extends Activity implements OnItemSelectedListener {
+<<<<<<< HEAD
+	String[] menu;
+    DrawerLayout dLayout;
+    ListView dList;
+    ArrayAdapter<String> adapter;
+    
+=======
     String[] menu;
     DrawerLayout dLayout;
     ListView dList;
     ArrayAdapter<String> adapter;
 
+>>>>>>> origin/revision-1
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.makepost);
+		
+		//Nav Drawer code starts here
+		menu = getResources().getStringArray(R.array.draweritems);
+        dLayout = (DrawerLayout) findViewById(R.id.makepost_drawer_layout);
+        dList = (ListView) findViewById(R.id.makepost_drawer);
+        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,menu);
+        dList.setAdapter(adapter);
+        dList.setSelector(android.R.color.holo_blue_dark);
+        dList.setOnItemClickListener(new OnItemClickListener(){
+	        @Override
+	        public void onItemClick(AdapterView<?> arg0, View v, int position, long id) {
+		        dLayout.closeDrawers();
+		        
+		        switch (position) {
+			    case 0:
+			    	Intent i = new Intent(getApplicationContext(),com.classrooms.activity.home.class);
+	                startActivity(i);
+			    	break;
+			    case 1:
+			    	Intent j = new Intent(getApplicationContext(),com.classrooms.activity.profile.class);
+	                startActivity(j);
+			      	break;
+			    case 2:
+			    	Intent k = new Intent(getApplicationContext(),com.classrooms.activity.makeClassroom.class);
+	                startActivity(k);
+			      	break;
+			    case 3:
+			    	Intent l = new Intent(getApplicationContext(),com.classrooms.activity.makePost.class);
+	                startActivity(l);
+			      	break;
+			    default:
+			    	break;
+		    }
+		        
+	        }
+        });
+      //Nav Drawer code ends here
 
         menu = getResources().getStringArray(R.array.draweritems);
         dLayout = (DrawerLayout) findViewById(R.id.makepost_drawer_layout);
@@ -108,41 +177,7 @@ public class makePost extends Activity implements OnItemSelectedListener {
 		// TODO Auto-generated method stub
 		
 	}
-	
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// TODO Auto-generated method stub
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// TODO Auto-generated method stub
-		switch (item.getItemId()) {
-		    case R.id.menu_home:
-		    	Intent i = new Intent(this,com.classrooms.activity.home.class);
-                startActivity(i);
-		    	break;
-		    case R.id.menu_profile:
-		    	Intent j = new Intent(this,com.classrooms.activity.profile.class);
-                startActivity(j);
-		      	break;
-		    case R.id.menu_makeClassroom:
-		    	Intent k = new Intent(this,com.classrooms.activity.makeClassroom.class);
-                startActivity(k);
-		      	break;
-		    case R.id.menu_writePost:
-		    	Intent l = new Intent(this,com.classrooms.activity.makePost.class);
-                startActivity(l);
-		      	break;
-		    default:
-		    	break;
-	    }
-
-	    return true;
-	}
-	
 	@Override
 	public void onNothingSelected(AdapterView<?> parent) {
 		// TODO Auto-generated method stub

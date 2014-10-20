@@ -1,11 +1,18 @@
 package com.classrooms.activity;
 
 import android.app.ActionBar;
+<<<<<<< HEAD
 import android.graphics.Typeface;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.widget.Button;
 import android.widget.EditText;
+=======
+import android.support.v4.widget.DrawerLayout;
+import android.text.Spannable;
+import android.text.SpannableString;
+
+>>>>>>> origin/revision-1
 import com.classrooms.R;
 
 import android.app.Activity;
@@ -14,20 +21,64 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.AdapterView.OnItemClickListener;
 
 public class postActivity extends Activity{
+	String[] menu;
+    DrawerLayout dLayout;
+    ListView dList;
+    ArrayAdapter<String> adapter;
+    
 	@Override
 	protected void onCreate(Bundle bundle) {
 		// TODO Auto-generated method stub
 		super.onCreate(bundle);
 		setContentView (R.layout.post_classroom);
+		
+		menu = getResources().getStringArray(R.array.draweritems);
+        dLayout = (DrawerLayout) findViewById(R.id.post_classroom_drawer_layout);
+        dList = (ListView) findViewById(R.id.post_classroom_drawer);
+        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,menu);
+        dList.setAdapter(adapter);
+        dList.setSelector(android.R.color.holo_blue_dark);
+        dList.setOnItemClickListener(new OnItemClickListener(){
+	        @Override
+	        public void onItemClick(AdapterView<?> arg0, View v, int position, long id) {
+		        dLayout.closeDrawers();
+		        
+		        switch (position) {
+			    case 0:
+			    	Intent i = new Intent(getApplicationContext(),com.classrooms.activity.home.class);
+	                startActivity(i);
+			    	break;
+			    case 1:
+			    	Intent j = new Intent(getApplicationContext(),com.classrooms.activity.profile.class);
+	                startActivity(j);
+			      	break;
+			    case 2:
+			    	Intent k = new Intent(getApplicationContext(),com.classrooms.activity.makeClassroom.class);
+	                startActivity(k);
+			      	break;
+			    case 3:
+			    	Intent l = new Intent(getApplicationContext(),com.classrooms.activity.makePost.class);
+	                startActivity(l);
+			      	break;
+			    default:
+			    	break;
+		    }
+		        
+	        }
+        });
+		
 		Bundle extras = getIntent().getExtras();
 		if (extras == null){
 			return;
 		}
-
 
         ActionBar actionBar =getActionBar();
 
@@ -92,40 +143,6 @@ public class postActivity extends Activity{
 
 	public void onClick(View view){
 		finish();
-	}
-	
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// TODO Auto-generated method stub
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
-	
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// TODO Auto-generated method stub
-		switch (item.getItemId()) {
-		    case R.id.menu_home:
-		    	Intent i = new Intent(this,com.classrooms.activity.home.class);
-                startActivity(i);
-		    	break;
-		    case R.id.menu_profile:
-		    	Intent j = new Intent(this,com.classrooms.activity.profile.class);
-                startActivity(j);
-		      	break;
-		    case R.id.menu_makeClassroom:
-		    	Intent k = new Intent(this,com.classrooms.activity.makeClassroom.class);
-                startActivity(k);
-		      	break;
-		    case R.id.menu_writePost:
-		    	Intent l = new Intent(this,com.classrooms.activity.makePost.class);
-                startActivity(l);
-		      	break;
-		    default:
-		    	break;
-	    }
-
-	    return true;
 	}
 
 	@Override
