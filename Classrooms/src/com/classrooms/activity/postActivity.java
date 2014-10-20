@@ -1,18 +1,17 @@
 package com.classrooms.activity;
 
 import android.app.ActionBar;
-<<<<<<< HEAD
+
 import android.graphics.Typeface;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.widget.Button;
 import android.widget.EditText;
-=======
-import android.support.v4.widget.DrawerLayout;
-import android.text.Spannable;
-import android.text.SpannableString;
 
->>>>>>> origin/revision-1
+import android.support.v4.widget.DrawerLayout;
+
+
+
 import com.classrooms.R;
 
 import android.app.Activity;

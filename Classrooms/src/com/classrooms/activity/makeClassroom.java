@@ -1,24 +1,16 @@
 package com.classrooms.activity;
 
 import android.app.ActionBar;
-<<<<<<< HEAD
+
 import android.graphics.Typeface;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.widget.*;
-=======
-<<<<<<< HEAD
-import android.graphics.Typeface;
-import android.support.v4.widget.DrawerLayout;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.widget.*;
 
-=======
-import android.text.Spannable;
-import android.text.SpannableString;
->>>>>>> origin/revision-1
->>>>>>> origin/revision-1
+import android.support.v4.widget.DrawerLayout;
+
+
+
 import com.classrooms.R;
 
 import android.app.Activity;
@@ -27,14 +19,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 import android.widget.AdapterView.OnItemClickListener;
-=======
+
 import android.widget.AdapterView;
->>>>>>> origin/revision-1
->>>>>>> origin/revision-1
+
 import android.widget.AdapterView.OnItemSelectedListener;
 
 public class makeClassroom extends Activity implements OnItemSelectedListener {

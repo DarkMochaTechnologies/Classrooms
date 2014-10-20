@@ -1,60 +1,36 @@
 package com.classrooms.activity;
 
 import android.app.ActionBar;
-<<<<<<< HEAD
-import android.graphics.Typeface;
-import android.support.v4.widget.DrawerLayout;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.widget.*;
-=======
-<<<<<<< HEAD
 import android.graphics.Typeface;
 import android.support.v4.widget.DrawerLayout;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.widget.*;
 
-=======
-import android.support.v4.widget.DrawerLayout;
-import android.text.Spannable;
-import android.text.SpannableString;
 import android.widget.ListView;
->>>>>>> origin/revision-1
->>>>>>> origin/revision-1
+
 import com.classrooms.R;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+
 import android.view.View;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import android.widget.AdapterView.OnItemClickListener;
-=======
-import android.widget.AdapterView;
->>>>>>> origin/revision-1
->>>>>>> origin/revision-1
-import android.widget.AdapterView.OnItemSelectedListener;
+
 import android.widget.AdapterView.OnItemClickListener;
 
+import android.widget.AdapterView;
+
+import android.widget.AdapterView.OnItemSelectedListener;
+
+
 public class makePost extends Activity implements OnItemSelectedListener {
-<<<<<<< HEAD
 	String[] menu;
     DrawerLayout dLayout;
     ListView dList;
     ArrayAdapter<String> adapter;
     
-=======
-    String[] menu;
-    DrawerLayout dLayout;
-    ListView dList;
-    ArrayAdapter<String> adapter;
 
->>>>>>> origin/revision-1
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
