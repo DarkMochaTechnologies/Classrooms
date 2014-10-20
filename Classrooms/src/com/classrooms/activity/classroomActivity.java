@@ -8,12 +8,16 @@ import android.support.v4.widget.DrawerLayout;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.view.View;
+<<<<<<< HEAD
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+=======
+import android.widget.*;
+>>>>>>> origin/revision-1
 import com.classrooms.R;
 import com.classrooms.adapter.classroomTabListener;
 import com.classrooms.fragments.*;
@@ -25,7 +29,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.Color;
 import 	android.view.View;
@@ -36,24 +39,36 @@ public class classroomActivity extends Activity{
 	Fragment classroomHomeFragment = new classroomHomeFragment();
 	Fragment classroomPostsFragment = new classroomPostsFragment();
 	Fragment classroomFilesFragment = new classroomFilesFragment();
+<<<<<<< HEAD
 	String[] menu;
     DrawerLayout dLayout;
     ListView dList;
     ArrayAdapter<String> adapter;
     
+=======
+    String[] menu;
+    DrawerLayout dLayout;
+    ListView dList;
+    ArrayAdapter<String> adapter;
+
+>>>>>>> origin/revision-1
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.classroom);
         Color color;
+<<<<<<< HEAD
         
         //Nav Drawer code starts here
+=======
+>>>>>>> origin/revision-1
         menu = getResources().getStringArray(R.array.draweritems);
         dLayout = (DrawerLayout) findViewById(R.id.classroom_drawer_layout);
         dList = (ListView) findViewById(R.id.classroom_drawer);
         adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,menu);
         dList.setAdapter(adapter);
         dList.setSelector(android.R.color.holo_blue_dark);
+<<<<<<< HEAD
         dList.setOnItemClickListener(new OnItemClickListener(){
 	        @Override
 	        public void onItemClick(AdapterView<?> arg0, View v, int position, long id) {
@@ -84,6 +99,39 @@ public class classroomActivity extends Activity{
         });
         //Nav Drawer code ends here
         
+=======
+        dList.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View v, int position, long id) {
+                dLayout.closeDrawers();
+
+                switch (position) {
+                    case 0:
+                        Intent i = new Intent(getApplicationContext(),com.classrooms.activity.home.class);
+                        startActivity(i);
+                        break;
+                    case 1:
+                        Intent j = new Intent(getApplicationContext(),com.classrooms.activity.profile.class);
+                        startActivity(j);
+                        break;
+                    case 2:
+                        Intent k = new Intent(getApplicationContext(),com.classrooms.activity.makeClassroom.class);
+                        startActivity(k);
+                        break;
+                    case 3:
+                        Intent l = new Intent(getApplicationContext(),com.classrooms.activity.makePost.class);
+                        startActivity(l);
+                        break;
+                    default:
+                        break;
+                }
+
+            }
+        });
+
+
+
+>>>>>>> origin/revision-1
         ActionBar actionBar = getActionBar();
 
         //actionBar.setBackgroundDrawable(new ColorDrawable(Color.rgb(255,255,255))); "quicksand_book.otf"
@@ -95,6 +143,7 @@ public class classroomActivity extends Activity{
         // Update the action bar title with the TypefaceSpan instance
 
         actionBar.setTitle(s);
+
 
 
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);

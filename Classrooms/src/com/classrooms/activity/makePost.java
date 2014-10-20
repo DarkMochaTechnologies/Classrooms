@@ -1,12 +1,19 @@
 package com.classrooms.activity;
 
 import android.app.ActionBar;
+<<<<<<< HEAD
 import android.graphics.Typeface;
 import android.support.v4.widget.DrawerLayout;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.widget.*;
 
+=======
+import android.support.v4.widget.DrawerLayout;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.widget.ListView;
+>>>>>>> origin/revision-1
 import com.classrooms.R;
 
 import android.app.Activity;
@@ -15,15 +22,30 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+<<<<<<< HEAD
 import android.widget.AdapterView.OnItemClickListener;
+=======
+import android.widget.AdapterView;
+>>>>>>> origin/revision-1
 import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 public class makePost extends Activity implements OnItemSelectedListener {
+<<<<<<< HEAD
 	String[] menu;
     DrawerLayout dLayout;
     ListView dList;
     ArrayAdapter<String> adapter;
     
+=======
+    String[] menu;
+    DrawerLayout dLayout;
+    ListView dList;
+    ArrayAdapter<String> adapter;
+
+>>>>>>> origin/revision-1
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -67,6 +89,41 @@ public class makePost extends Activity implements OnItemSelectedListener {
         });
       //Nav Drawer code ends here
 
+        menu = getResources().getStringArray(R.array.draweritems);
+        dLayout = (DrawerLayout) findViewById(R.id.makepost_drawer_layout);
+        dList = (ListView) findViewById(R.id.makepost_drawer);
+        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,menu);
+        dList.setAdapter(adapter);
+        dList.setSelector(android.R.color.holo_blue_dark);
+        dList.setOnItemClickListener(new OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View v, int position, long id) {
+                dLayout.closeDrawers();
+
+                switch (position) {
+                    case 0:
+                        Intent i = new Intent(getApplicationContext(),com.classrooms.activity.home.class);
+                        startActivity(i);
+                        break;
+                    case 1:
+                        Intent j = new Intent(getApplicationContext(),com.classrooms.activity.profile.class);
+                        startActivity(j);
+                        break;
+                    case 2:
+                        Intent k = new Intent(getApplicationContext(),com.classrooms.activity.makeClassroom.class);
+                        startActivity(k);
+                        break;
+                    case 3:
+                        Intent l = new Intent(getApplicationContext(),com.classrooms.activity.makePost.class);
+                        startActivity(l);
+                        break;
+                    default:
+                        break;
+                }
+
+            }
+        });
+
         ActionBar actionBar =getActionBar();
 
         SpannableString s = new SpannableString("Classrooms");
@@ -81,28 +138,6 @@ public class makePost extends Activity implements OnItemSelectedListener {
 		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 		        R.array.locations_array, android.R.layout.simple_spinner_item);
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        Typeface[] typeFace = new Typeface[2];
-
-         typeFace[0] = Typeface.createFromAsset(getAssets(), "fonts/quicksand_light_oblique.otf");
-        typeFace[1] = Typeface.createFromAsset(getAssets(), "fonts/quicksand_book.otf");
-
-        Button create = (Button) findViewById(R.id.makePost_button_create);
-        final EditText name = (EditText)findViewById(R.id.makePost_editText_name);
-        final EditText post = (EditText)findViewById(R.id.makePost_editText_post);
-
-        final TextView nameLabel = (TextView) findViewById(R.id.makePost_textView_name);
-        final TextView courseLabel = (TextView) findViewById(R.id.makePost_textView_course);
-
-        if(nameLabel != null && courseLabel != null ){
-            nameLabel.setTypeface(typeFace[1]);
-            courseLabel.setTypeface(typeFace[1]);
-        }
-
-
-        create.setTypeface(typeFace[1]);
-        name.setTypeface(typeFace[0]);
-        post.setTypeface(typeFace[0]);
 		spinner.setAdapter(adapter);
 		spinner.setOnItemSelectedListener(this);
 	}

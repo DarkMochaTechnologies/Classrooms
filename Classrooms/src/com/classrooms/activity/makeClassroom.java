@@ -1,12 +1,17 @@
 package com.classrooms.activity;
 
 import android.app.ActionBar;
+<<<<<<< HEAD
 import android.graphics.Typeface;
 import android.support.v4.widget.DrawerLayout;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.widget.*;
 
+=======
+import android.text.Spannable;
+import android.text.SpannableString;
+>>>>>>> origin/revision-1
 import com.classrooms.R;
 
 import android.app.Activity;
@@ -15,8 +20,14 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+<<<<<<< HEAD
 import android.widget.AdapterView.OnItemClickListener;
+=======
+import android.widget.AdapterView;
+>>>>>>> origin/revision-1
 import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 public class makeClassroom extends Activity implements OnItemSelectedListener {
 	String[] menu;
@@ -82,24 +93,6 @@ public class makeClassroom extends Activity implements OnItemSelectedListener {
         // Update the action bar title with the TypefaceSpan instance
 
         actionBar.setTitle(s);
-
-        Typeface[] typeFace = new Typeface[7];
-
-        typeFace[0] = Typeface.createFromAsset(getAssets(), "fonts/quicksand_bold.otf");
-        typeFace[1] = Typeface.createFromAsset(getAssets(), "fonts/quicksand_book.otf");
-        typeFace[2] = Typeface.createFromAsset(getAssets(), "fonts/quicksand_bold_oblique.otf");
-        typeFace[3] = Typeface.createFromAsset(getAssets(), "fonts/quicksand_book_oblique.otf");
-        typeFace[4] = Typeface.createFromAsset(getAssets(), "fonts/quicksand_dash.otf");
-        typeFace[5] = Typeface.createFromAsset(getAssets(), "fonts/quicksand_light.otf");
-        typeFace[6] = Typeface.createFromAsset(getAssets(), "fonts/quicksand_light_oblique.otf");
-
-        Button login = (Button) findViewById(R.id.makeClassroom_button_createClassroom);
-        final EditText name = (EditText)findViewById(R.id.makeClassroom_editText_name);
-        final EditText description = (EditText)findViewById(R.id.makeClassroom_editText_description);
-
-        login.setTypeface(typeFace[1]);
-        name.setTypeface(typeFace[6]);
-        description.setTypeface(typeFace[6]);
 		
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spinner.setAdapter(adapter);

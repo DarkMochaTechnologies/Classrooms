@@ -47,7 +47,7 @@
 	            android:id="@+id/profile_button_makepost"
 	            android:layout_width="0dp"
 	            android:layout_height="wrap_content"
-	            android:background="@drawable/flat_selector_post_button"
+	            android:background="@drawable/flat_selector_post"
 	            android:layout_weight="1"
 	            android:text="@string/post" 
 	            android:layout_marginRight="3dp"/>

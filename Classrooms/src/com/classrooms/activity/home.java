@@ -82,6 +82,7 @@ public class home extends ListActivity{
 
         // Update the action bar title with the TypefaceSpan instance
         actionBar.setTitle(s);
+
 		homeAdapter adapter = new homeAdapter(this,items);
 		this.setListAdapter(adapter);
 	}
