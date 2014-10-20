@@ -43,7 +43,7 @@
 
     <Button
         android:id="@+id/makeClassroom_button_createClassroom"
-        android:background="@drawable/flat_selector"
+        android:background="@drawable/flat_selector_post_create"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop ="5dp"

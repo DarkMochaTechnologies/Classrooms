@@ -28,7 +28,7 @@
             android:layout_centerHorizontal="true"
             android:ems="15"
             android:hint="@string/username"
-            android:textColorHint="#C0C0C0"
+            android:textColorHint="#333333"
             android:paddingTop="8dp" >
 
     </EditText>
@@ -48,8 +48,7 @@
             android:layout_marginBottom="6dp"
             android:ems="15"
             android:hint="@string/email"
-            android:textColorHint="#C0C0C0"
-            android:textColor="#FFFFFF"
+            android:textColorHint="#333333"
             android:inputType="textWebEmailAddress" />
 
 
@@ -67,7 +66,7 @@
             android:layout_marginBottom="6dp"
             android:ems="15"
             android:hint="@string/password"
-            android:textColorHint="#C0C0C0"
+            android:textColorHint="#333333"
             android:inputType="textPassword" />
 
     <Button
@@ -75,10 +74,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000000"
-            android:shadowColor="#000000"
-            android:shadowDx="1"
-            android:shadowDy="3"
-            android:shadowRadius="5"
             android:background="@drawable/flat_selector"
             android:layout_marginTop="5dp"
             android:layout_alignLeft="@+id/register_editText_password"

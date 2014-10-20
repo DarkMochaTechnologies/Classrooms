@@ -1,8 +1,11 @@
 package com.classrooms.activity;
 
 import android.app.ActionBar;
+import android.graphics.Typeface;
 import android.text.Spannable;
 import android.text.SpannableString;
+import android.widget.Button;
+import android.widget.EditText;
 import com.classrooms.R;
 
 import android.app.Activity;
@@ -36,15 +39,33 @@ public class postActivity extends Activity{
 
         actionBar.setTitle(s);
 
+        Typeface[] typeFace = new Typeface[3];
+
+        typeFace[0] = Typeface.createFromAsset(getAssets(), "fonts/quicksand_light.otf");
+        typeFace[1] = Typeface.createFromAsset(getAssets(), "fonts/quicksand_light_oblique.otf");
+        typeFace[2] = Typeface.createFromAsset(getAssets(), "fonts/quicksand_book.otf");
+        Button commentButton= (Button) findViewById(R.id.postclassroom_button_comment);
+        final EditText comment = (EditText)findViewById(R.id.postclassroom_editText_comment);
+
+        final TextView postin = (TextView) findViewById(R.id.postclassroom_textView_postedin);
 
 		int value1 = extras.getInt("profilePic");
 		String value2 = extras.getString("name");
 		String value3 = extras.getString("location");
 		String value4 = extras.getString("description");
+
 		TextView name = (TextView) findViewById(R.id.postclassroom_textView_name);
 		TextView location = (TextView) findViewById(R.id.postclassroom_textView_location);
 		TextView post = (TextView) findViewById(R.id.postclassroom_textView_post);
 		ImageView profilePic = (ImageView) findViewById(R.id.postclassroom_imageView_profilePic);
+
+
+        commentButton.setTypeface(typeFace[0]);
+        name.setTypeface(typeFace[0]);
+        comment.setTypeface(typeFace[0]);
+        post.setTypeface(typeFace[0]);
+        postin.setTypeface(typeFace[1]);
+        location.setTypeface(typeFace[1]);
 			
 		if (value2 !=null && value3 != null){
 			name.setText(value2);

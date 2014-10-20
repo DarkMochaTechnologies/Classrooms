@@ -77,7 +77,7 @@
     	android:orientation="horizontal" >
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/postclassroom_editText_comment"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginTop="2dp"
@@ -88,7 +88,7 @@
         </EditText>
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/postclassroom_button_comment"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

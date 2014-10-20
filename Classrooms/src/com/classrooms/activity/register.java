@@ -40,7 +40,7 @@ public class register extends Activity{
 		final EditText password = (EditText)findViewById(R.id.register_editText_password);
 
 
-        register.setTypeface(typeFace[1]);
+        register.setTypeface(typeFace[5]);
         username.setTypeface(typeFace[6]);
         password.setTypeface(typeFace[6]);
         email.setTypeface(typeFace[6]);

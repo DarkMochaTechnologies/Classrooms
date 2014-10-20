@@ -37,17 +37,17 @@
                 android:text="@string/writehere" />
 
         <Button
-                android:id="@+id/button1"
+                android:id="@+id/makePost_button_create"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_alignRight="@+id/makePost_editText_post"
                 android:layout_below="@+id/makePost_editText_post"
-                android:background="@drawable/flat_selector"
+                android:background="@drawable/flat_selector_post_create"
                 android:text="@string/post"
                 android:textColor="@color/button_color_1"/>
 
         <TextView
-                android:id="@+id/classroomfilesrow_textView_name"
+                android:id="@+id/makePost_textView_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@+id/makePost_editText_name"
@@ -57,7 +57,7 @@
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/makePost_textView_course"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -72,7 +72,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="145dp"
-                android:layout_toRightOf="@+id/classroomfilesrow_textView_name"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/makePost_textView_name"
                 android:background="@drawable/flat_selector_normal_form"
                 android:ems="10"
                 android:hint="@string/name" >

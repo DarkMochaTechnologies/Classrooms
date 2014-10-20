@@ -38,8 +38,8 @@ public class login extends Activity{
 		final EditText username = (EditText)findViewById(R.id.login_editText_username);
 		final EditText password = (EditText)findViewById(R.id.login_editText_password);
 
-        login.setTypeface(typeFace[1]);
-        register.setTypeface(typeFace[1]);
+        login.setTypeface(typeFace[5]);
+        register.setTypeface(typeFace[5]);
         username.setTypeface(typeFace[6]);
         password.setTypeface(typeFace[6]);
         

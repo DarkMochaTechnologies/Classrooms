@@ -33,11 +33,11 @@
 
     <Button
         android:id="@+id/makeClassroom_button_createClassroom"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/makeClassroom_editText_description"
         android:layout_below="@+id/makeClassroom_editText_description"
-        android:background="@drawable/flat_selector"
+        android:background="@drawable/flat_selector_post_create"
         android:text="@string/makeclassroom" 
         android:textColor="@color/button_color_1"/>
 
@@ -47,13 +47,14 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="81dp"
-        android:layout_toRightOf="@+id/classroomfilesrow_textView_name"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/makeClassroom_textView_name"
         android:background="@drawable/flat_selector_normal_form"
         android:ems="10"
         android:hint="@string/name" />
 
     <TextView
-        android:id="@+id/classroomfilesrow_textView_name"
+        android:id="@+id/makeClassroom_textView_course"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/TextView01"
@@ -63,7 +64,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/TextView01"
+        android:id="@+id/makeClassroom_textView_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/makeClassroom_editText_name"

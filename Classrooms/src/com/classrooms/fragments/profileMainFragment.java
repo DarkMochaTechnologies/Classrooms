@@ -38,8 +38,8 @@ public class profileMainFragment extends Fragment{
 		Button makePost = (Button) view.findViewById(R.id.profile_button_makepost);
 		Button makeClassroom = (Button) view.findViewById(R.id.profile_button_makeclassroom);
 
-        makePost.setTypeface(typeFace[1]);
-        makeClassroom.setTypeface(typeFace[1]);
+        makePost.setTypeface(typeFace[5]);
+        makeClassroom.setTypeface(typeFace[5]);
         name.setTypeface(typeFace[1]);
         description.setTypeface(typeFace[5]);
         DisplayMetrics displaymetrics = new DisplayMetrics();
