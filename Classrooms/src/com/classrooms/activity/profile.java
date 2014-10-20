@@ -21,10 +21,10 @@ import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class profile extends Activity{
-	String[] menu;
-    DrawerLayout dLayout;
-    ListView dList;
-    ArrayAdapter<String> adapter;
+	String[] menu1;
+    DrawerLayout dLayout1;
+    ListView dList1;
+    ArrayAdapter<String> adapter1;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -33,16 +33,17 @@ public class profile extends Activity{
 
 		setContentView(R.layout.profile);
 		
-		/*menu = getResources().getStringArray(R.array.draweritems);
-        dLayout = (DrawerLayout) findViewById(R.id.classroom_drawer_layout);
-        dList = (ListView) findViewById(R.id.classroom_drawer);
-        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,menu);
-        dList.setAdapter(adapter);
-        dList.setSelector(android.R.color.holo_blue_dark);
-        dList.setOnItemClickListener(new OnItemClickListener(){
+		//Nav Drawer code starts here
+		menu1 = getResources().getStringArray(R.array.draweritems);
+        dLayout1 = (DrawerLayout) findViewById(R.id.profile_drawer_layout);
+        dList1 = (ListView) findViewById(R.id.profile_drawer);
+        adapter1 = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,menu1);
+        dList1.setAdapter(adapter1);
+        dList1.setSelector(android.R.color.holo_blue_dark);
+        dList1.setOnItemClickListener(new OnItemClickListener(){
 	        @Override
 	        public void onItemClick(AdapterView<?> arg0, View v, int position, long id) {
-		        dLayout.closeDrawers();
+		        dLayout1.closeDrawers();
 		        
 		        switch (position) {
 			    case 0:
@@ -66,7 +67,8 @@ public class profile extends Activity{
 		    }
 		        
 	        }
-        });*/
+        });
+      //Nav Drawer code ends here
 	}
 
 	@Override

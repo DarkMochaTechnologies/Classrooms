@@ -6,8 +6,10 @@ import android.app.ActionBar;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
+import android.support.v4.widget.DrawerLayout;
 import android.text.Spannable;
 import android.text.SpannableString;
+
 import com.classrooms.R;
 import com.classrooms.adapter.homeAdapter;
 import com.classrooms.model.classroom;
@@ -18,16 +20,59 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.AdapterView.OnItemClickListener;
 
 public class home extends ListActivity{
 	private static final int REQUEST_CODE = 10;
-
+	String[] menu;
+    DrawerLayout dLayout;
+    ListView dList3;
+    ArrayAdapter<String> adapter2;
+    
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		ArrayList<classroom> items = classroom.populateItems();
-
 		super.onCreate(savedInstanceState);
+		
+		menu = getResources().getStringArray(R.array.draweritems);
+        dLayout = (DrawerLayout) findViewById(R.id.home_drawer_layout);
+        dList3 = (ListView) findViewById(R.id.home_drawer);
+        if (dList3 != null){
+        adapter2 = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,menu);
+        dList3.setAdapter(adapter2);
+        dList3.setSelector(android.R.color.holo_blue_dark);
+        dList3.setOnItemClickListener(new OnItemClickListener(){
+	        @Override
+	        public void onItemClick(AdapterView<?> arg0, View v, int position, long id) {
+		        dLayout.closeDrawers();
+		        
+		        switch (position) {
+			    case 0:
+			    	Intent i = new Intent(getApplicationContext(),com.classrooms.activity.home.class);
+	                startActivity(i);
+			    	break;
+			    case 1:
+			    	Intent j = new Intent(getApplicationContext(),com.classrooms.activity.profile.class);
+	                startActivity(j);
+			      	break;
+			    case 2:
+			    	Intent k = new Intent(getApplicationContext(),com.classrooms.activity.makeClassroom.class);
+	                startActivity(k);
+			      	break;
+			    case 3:
+			    	Intent l = new Intent(getApplicationContext(),com.classrooms.activity.makePost.class);
+	                startActivity(l);
+			      	break;
+			    default:
+			    	break;
+		        }
+		        
+	        }
+        });
+        }
 
         ActionBar actionBar = getActionBar();
 
