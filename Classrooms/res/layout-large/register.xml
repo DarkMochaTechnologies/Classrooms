@@ -12,7 +12,7 @@
             android:id="@+id/homerow_imageView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="193dp"
+            android:layout_marginTop="190dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
             android:src="@drawable/classrooms_logo" android:layout_alignParentTop="true"
@@ -69,16 +69,34 @@
             android:textColorHint="#333333"
             android:inputType="textPassword" />
 
+    <ImageView
+        android:id="@+id/register_imageView_profilepic"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/register_editText_password"
+        android:layout_below="@+id/register_editText_password"
+        android:src="@drawable/ic_action_user" />
+
     <Button
-            android:id="@+id/register_button_register"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#000000"
-            android:background="@drawable/flat_selector"
-            android:layout_marginTop="5dp"
-            android:layout_alignLeft="@+id/register_editText_password"
-            android:layout_alignRight="@+id/register_editText_password"
-            android:layout_below="@+id/register_editText_password"
-            android:text="@string/register" />
+        android:id="@+id/register_button_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/register_imageView_profilepic"
+        android:layout_alignRight="@+id/register_editText_password"
+        android:layout_below="@+id/register_imageView_profilepic"
+        android:background="@drawable/flat_selector"
+        android:text="@string/register"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/register_button_selectpic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/register_editText_password"
+        android:layout_alignTop="@+id/register_imageView_profilepic"
+        android:layout_toRightOf="@+id/register_imageView_profilepic"
+        android:background="@drawable/flat_selector"
+        android:text="@string/choosepic"
+        android:textColor="#000000" />
 
 </RelativeLayout>

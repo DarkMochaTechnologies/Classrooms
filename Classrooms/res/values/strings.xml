@@ -53,5 +53,6 @@
         <item>Create Class</item>
         <item>Write Post</item>
         <item>Upload File</item>
-	</string-array>    
+	</string-array>
+        <string name="choosepic">Select Profile pic</string>    
 </resources>
