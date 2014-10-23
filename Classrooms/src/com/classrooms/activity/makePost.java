@@ -125,11 +125,12 @@ public class makePost extends Activity implements OnItemSelectedListener {
         final EditText post = (EditText)findViewById(R.id.makePost_editText_post);
         final TextView nameLabel = (TextView) findViewById(R.id.makePost_textView_name);
         final TextView courseLabel = (TextView) findViewById(R.id.makePost_textView_course);
-
+        
         if(nameLabel != null && courseLabel != null){
             nameLabel.setTypeface(typeFace[1]);
             courseLabel.setTypeface(typeFace[1]);
         }
+ 
        create.setTypeface(typeFace[1]);
 
         name.setTypeface(typeFace[0]);

@@ -52,17 +52,14 @@ public class register extends Activity{
         password.setTypeface(typeFace[6]);
         email.setTypeface(typeFace[6]);
 		
-        buttonLoadImage.setOnClickListener(new View.OnClickListener() {
-            
-            @Override
-            public void onClick(View arg0) {
-                 
-                Intent i = new Intent(
-                        Intent.ACTION_PICK,
-                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                 
-                startActivityForResult(i, RESULT_LOAD_IMAGE);
+        register.setOnClickListener(new View.OnClickListener() {
+        	 
+            public void onClick(View v) {
+               
+                Intent i = new Intent(getApplicationContext(),register.class);
+                startActivity(i);
             }
+        
         });
 		register.setOnClickListener(new View.OnClickListener() {
 			 

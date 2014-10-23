@@ -43,7 +43,6 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_alignRight="@+id/makePost_editText_post"
-                android:layout_below="@+id/makePost_editText_post"
                 android:background="@drawable/flat_selector_post_create"
                 android:text="@string/post"
                 android:textColor="@color/button_color_1"/>
@@ -55,6 +54,7 @@
                 android:layout_alignBaseline="@+id/makePost_editText_name"
                 android:layout_alignBottom="@+id/makePost_editText_name"
                 android:layout_alignParentLeft="true"
+                android:layout_below="@+id/makePost_button_create"
                 android:text="Name: "
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -69,21 +69,21 @@
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <EditText
-                android:id="@+id/makePost_editText_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="145dp"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/makePost_textView_name"
-                android:background="@drawable/flat_selector_normal_form"
-                android:ems="10"
-                android:hint="@string/name" >
+            android:id="@+id/makePost_editText_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/makePost_textView_name"
+            android:layout_below="@+id/makePost_button_create"
+            android:background="@drawable/flat_selector_normal_form"
+            android:ems="10"
+            android:hint="@string/name" >
 
             <requestFocus />
         </EditText>
 	</RelativeLayout>
-	
 	<ListView android:id="@+id/makepost_drawer"
         android:layout_width="240dp"
         android:layout_height="match_parent"
@@ -92,5 +92,4 @@
         android:divider="@android:color/transparent"
         android:dividerHeight="0dp"
         android:background="#FFFFFF"/>
-
 </android.support.v4.widget.DrawerLayout>
