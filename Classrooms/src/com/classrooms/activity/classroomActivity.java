@@ -5,18 +5,13 @@ import android.graphics.ColorFilter;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.view.View;
-
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
-
-
 import android.widget.*;
 
 import com.classrooms.R;
@@ -28,6 +23,7 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -43,9 +39,10 @@ public class classroomActivity extends Activity{
 	String[] menu;
     String mTitle;
 
-    DrawerLayout dLayout;
+    private DrawerLayout dLayout;
     ListView dList;
     CustomTypefaceAdapter adapter;
+    private ActionBarDrawerToggle mDrawerToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,6 +107,28 @@ public class classroomActivity extends Activity{
 
 	        }
         });
+     // enable ActionBar app icon to behave as action to toggle nav drawer
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getActionBar().setHomeButtonEnabled(true);
+
+        // ActionBarDrawerToggle ties together the the proper interactions
+        // between the sliding drawer and the action bar app icon
+        mDrawerToggle = new ActionBarDrawerToggle(
+                this,                  /* host Activity */
+                dLayout,         /* DrawerLayout object */
+                R.drawable.ic_drawer,  /* nav drawer image to replace 'Up' caret */
+                R.string.profile,  /* "open drawer" description for accessibility */
+                R.string.profile  /* "close drawer" description for accessibility */
+                ) {
+            public void onDrawerClosed(View view) {
+                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+            }
+
+            public void onDrawerOpened(View drawerView) {
+                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+            }
+        };
+        dLayout.setDrawerListener(mDrawerToggle);
         //Nav Drawer code ends here
 
 
@@ -159,5 +178,28 @@ public class classroomActivity extends Activity{
 		fragment.setArguments(extras);
 
     }
-
+	@Override
+	protected void onPostCreate(Bundle savedInstanceState) {
+	     super.onPostCreate(savedInstanceState);
+	     // Sync the toggle state after onRestoreInstanceState has occurred.
+	     mDrawerToggle.syncState();
+	}
+	
+	@Override
+	public void onConfigurationChanged(Configuration newConfig) {
+	    super.onConfigurationChanged(newConfig);
+	    mDrawerToggle.onConfigurationChanged(newConfig);
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	     // Pass the event to ActionBarDrawerToggle, if it returns
+	     // true, then it has handled the app icon touch event
+	     if (mDrawerToggle.onOptionsItemSelected(item)) {
+	         return true;
+	     }
+	     // Handle your other action bar items...
+	
+	     return super.onOptionsItemSelected(item);
+	}
 }
